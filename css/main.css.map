@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"main.css"}
+{"version":3,"sourceRoot":"","sources":["../sass/components/_header.scss","../sass/components/_common-elements.scss"],"names":[],"mappings":"AAAA,gBACI,eAGJ,UACI,aACA,aACI,aACA,sBAIR,qCACI,gBACI,wBAGJ,UACI,wBACA,aACI,oBCpBZ,YACI,6BAGJ,qCACI,YACI,mBACA","file":"main.css"}
