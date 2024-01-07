@@ -3,6 +3,7 @@
 }
 
 #nav-menu {
+    display: none;
     ul {
         display: flex;
         flex-direction: column;
@@ -15,6 +16,7 @@
     }
 
     #nav-menu {
+        display: grid!important;
         ul {
             flex-direction: row;
         }

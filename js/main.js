@@ -2,7 +2,7 @@
     const hamMenu = document.querySelector("#hamburger-menu-icon")
 
     function openMobileNav() {
-        var headerMenu = document.querySelector("")
+        var headerMenu = document.querySelector("#nav-menu")
 
         if (headerMenu.style.display === "grid") {
             headerMenu.style.display = "none"
