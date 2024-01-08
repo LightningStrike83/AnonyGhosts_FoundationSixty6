@@ -1,6 +1,6 @@
 # Foundation Sixty6  
 
-Foundation Sixty6 aims to assist and provide mental health support to the people and families that need it.  
+Foundation Sixty6 is a foundation whose main objective is to facilitate improved access to mental healthcare for youth between the ages of 16 and 25 suffering from psychosis, bipolar disorder (BP), and schizophrenia, specifically within Southwestern Ontario.  
 
 ## Installation  
 
