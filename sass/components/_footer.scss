@@ -1,0 +1,18 @@
+footer {
+    height: 100px;
+    background-color: pink;
+    .grid-con {
+        margin: 0;
+        grid-column: 2/3;
+    }
+}
+
+#footer-logo, #footer-links, #footer-newsletter {
+    background-color: orange;
+    text-align: center;
+    align-self: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+ 
