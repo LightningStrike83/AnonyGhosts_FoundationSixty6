@@ -54,6 +54,12 @@ header {
     cursor: pointer;
 }
 
+#get-help-menu, #get-involved-menu, #about-menu {
+    display: none;
+    flex-direction: column;
+    background-color: orange;
+}
+
 @media screen and (min-width: 768px) {
     #hamburger-menu {
         display: none!important;
