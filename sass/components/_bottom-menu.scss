@@ -1,0 +1,51 @@
+#bottom-menu {
+    background-color: transparent;
+    bottom: 0;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-icon {
+    background-color: black;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    transition: all 0.5s ease-in-out;
+    position: sticky;
+    bottom: 0;
+    left: 90%;
+    z-index: 10;
+    cursor: pointer;
+    &:hover {
+        background-color: pink;
+        border: 1px solid pink;
+    }
+}
+
+#activation-icon {
+    z-index: 20;
+    order: 1!important;
+}
+
+#dark-mode, #emergency-phone {
+    transition: all ease-in-out 1s;
+}
+
+#dark-mode {
+    order: -1;
+}
+
+#emergency-phone {
+    order: -2;
+}
+
+@media screen and (min-width) {
+    .botton-icon {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
