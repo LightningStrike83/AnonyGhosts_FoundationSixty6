@@ -1,5 +1,7 @@
+@use "../abstracts/variables" as v;
+
 header {
-    background-color: pink;
+    background-color: transparent;
     height: 100px;
     position: sticky;
     top: 0;
@@ -19,7 +21,7 @@ header {
 }
 
 #donate-button {
-    background-color: orange;
+    background-color: v.$darkcolour;
     text-align: center;
     align-self: center;
     padding-top: 10px;
@@ -28,14 +30,16 @@ header {
 
 #hamburger-menu-icon {
     display: flex;
+    align-items: center;
 }
 
 #hamburger-menu {
+    height: 30px;
     cursor: pointer;
 }
 
 #nav-menu {
-    background-color: orange;
+    background-color: v.$darkcolour;
     display: none;
     align-content: center;
     p:not(.line-break) {
@@ -58,10 +62,13 @@ header {
     display: none;
     flex-direction: column;
     background-color: orange;
+    position: absolute;
+    top: 100px;
+    right: 150px;
 }
 
 @media screen and (min-width: 768px) {
-    #hamburger-menu {
+    #hamburger-menu-icon {
         display: none!important;
     }
 
@@ -78,6 +85,35 @@ header {
             flex-direction: row;
             align-self: center;
             text-align: center;
+        }
+    }
+
+    #get-help-menu, #get-involved-menu, #about-menu {
+        .line-break {
+            border-bottom: 1px solid black;;
+            border-right: none;
+        }
+    }
+
+    #about-menu {
+        right: 61%;
+    }
+
+    #get-help-menu {
+        right: 51%;
+    }
+
+    #get-involved-menu {
+        right: 32%;
+    }
+
+    @media screen and (min-width: 1200px) {
+        #about-menu {
+            right: 56%;
+        }
+
+        #get-involved-menu {
+            right: 35%;
         }
     }
 }
