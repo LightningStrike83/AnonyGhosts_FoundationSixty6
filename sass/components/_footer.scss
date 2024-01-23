@@ -1,8 +1,6 @@
-@use "../abstracts/variables" as v;
-
 footer {
     height: 100px;
-    background-color: v.$darkcolour;
+    background-color: pink;
     .grid-con {
         margin: 0;
         grid-column: 2/3;
@@ -10,7 +8,7 @@ footer {
 }
 
 #footer-logo, #footer-links, #footer-newsletter {
-    background-color: v.$green;
+    background-color: orange;
     text-align: center;
     align-self: center;
     padding-top: 10px;

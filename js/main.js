@@ -18,13 +18,9 @@
 
     function openMobileNav() {
         var headerMenu = document.querySelector("#nav-menu")
-        var expandedMenus = document.querySelectorAll(".expand-menu")
 
         if (headerMenu.style.display === "grid") {
             headerMenu.style.display = "none"
-            expandedMenus.forEach(menu => {
-                menu.style.display = "none"
-            })
         } else {
             headerMenu.style.display = "grid"
         }
