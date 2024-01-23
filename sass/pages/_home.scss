@@ -1,6 +1,8 @@
+@use "../abstracts/variables" as v;
+
 #hero-index {
     height: 530px;
-    background-color: green;
+    background-color: v.$green;
     margin-bottom: 10px;
     color: white;
     text-align: center;
@@ -8,16 +10,15 @@
 
 #crisis-information {
     height: 100px;
-    background-color: green;
+    background-color: v.$darkcolour;
     color: white;
     text-align: center;
-    border: 3px solid black;
-    border-radius: 20px;
     margin-bottom: 20px;
+    border-bottom-right-radius: 50px;
 }
 
 #website-directions {
-    background-color: green;
+    background-color: v.$green;
     height: 540px;
     margin-bottom: 20px;
 }
@@ -66,7 +67,7 @@
 
 #illness-information {
     height: 300px;
-    background-color: green;
+    background-color: v.$green;
     margin-bottom: 20px;
 }
 
