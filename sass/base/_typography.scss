@@ -1,15 +1,45 @@
 @use "../abstracts/variables" as v;
 
-a, p {
-    color: v.$white;
+a, p, h3 {
+    color: black;
+    font-family: 'Montserrat', 'Montserrat Alternates', Arial, sans-serif;
 }
 
 a {
     text-decoration: none;
     transition: all ease-in-out 0.5s;
     font-size: 20px;
-    &:visited {
-        color: v.$white;
+    &:hover {
         text-decoration: underline;
+    }
+    &:visited {
+        color: black;
+    }
+}
+
+h3 {
+    font-weight: 700;
+}
+
+
+@media screen and (min-width: 768px) {
+    a, p {
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    a, p {
+        font-size: 18px;
+    }
+
+    .hero-text {
+        font-size: 90px;
+        font-weight: 700;
+        color: white;
+    }
+
+    h3 {
+        font-size: 35px;
     }
 }

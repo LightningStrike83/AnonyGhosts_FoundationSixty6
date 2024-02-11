@@ -147,9 +147,9 @@ body, p, h1, h2, h3, h4, h5 {
    .grid-con { 
       display: grid; 
       grid-template-columns: repeat(12, minmax(0, 1fr));
-      grid-column-gap: 16px;
-      padding-left: 140px;
-      padding-right: 140px;
+      grid-column-gap: 30px;
+      padding-left: 15px;
+      padding-right: 15px;
    }
 
    .l-col-auto {grid-column: auto;}

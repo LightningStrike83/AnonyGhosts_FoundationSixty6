@@ -1,7 +1,7 @@
 @use "../abstracts/variables" as v;
 
 header {
-    background-color: green;
+    background-color: transparent;
     height: 100px;
     position: sticky;
     top: 0;
@@ -21,7 +21,6 @@ header {
 }
 
 #donate-button {
-    background-color: v.$darkcolour;
     text-align: center;
     align-self: center;
     padding-top: 10px;
@@ -39,7 +38,6 @@ header {
 }
 
 #nav-menu {
-    background-color: v.$darkcolour;
     display: none;
     align-content: center;
     p:not(.line-break) {
@@ -56,6 +54,10 @@ header {
 
 .drop-menu {
     cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 #get-help-menu, #get-involved-menu, #about-menu {
@@ -66,6 +68,7 @@ header {
     top: 100px;
     right: 150px;
 }
+
 
 @media screen and (min-width: 768px) {
     #hamburger-menu-icon {
@@ -90,7 +93,7 @@ header {
 
     #get-help-menu, #get-involved-menu, #about-menu {
         .line-break {
-            border-bottom: 1px solid black;;
+            border-bottom: 1px solid black;
             border-right: none;
         }
     }
@@ -115,5 +118,18 @@ header {
         #get-involved-menu {
             right: 35%;
         }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .donate-text {
+        font-size: 20px;
+        color: v.$white;
+    }
+    
+    #donate-button {
+        border: 1px solid v.$orange;
+        border-radius: 50px;
+        background-color: v.$orange;
     }
 }
