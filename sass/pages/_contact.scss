@@ -1,12 +1,6 @@
 #contact-hero {
     div {
-        background-image: url(../images/hero-images/contact-hero.png);
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        flex-wrap: wrap;
+        background-image: url(../images/hero-images/contact-hero.jpg);
     }
 }
 
@@ -62,6 +56,9 @@
     #contact-hero {
         height: 405px;
         margin-bottom: 60px;
+        div {
+            box-shadow: inset 0 0 0 405px rgba($color: #000000, $alpha: 0.3);
+        }
     }
 
     #need-support {
