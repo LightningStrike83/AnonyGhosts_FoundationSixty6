@@ -2,9 +2,9 @@
 
 header {
     background-color: transparent;
-    height: 100px;
     position: sticky;
     top: 0;
+    margin-top: 20px;
 }
 
 #header-con {
@@ -13,27 +13,34 @@ header {
 }
 
 #header-logo {
-    background-color: orange;
     text-align: center;
     align-self: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    svg {
+        max-width: 60%;
+    }
 }
 
 #donate-button {
     text-align: center;
     align-self: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: v.$blue;
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #hamburger-menu-icon {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 #hamburger-menu {
-    height: 30px;
+    max-height: 32px;
     cursor: pointer;
 }
 
@@ -60,17 +67,28 @@ header {
     }
 }
 
-#get-help-menu, #get-involved-menu, #about-menu {
+#explore-menu {
+    position: absolute;
+    background-color: v.$blue;
+    top: 90px;
+    left: 40%;
     display: none;
     flex-direction: column;
-    background-color: orange;
-    position: absolute;
-    top: 100px;
-    right: 150px;
+    border-radius: 20px;
+    a {
+        margin: 40px;
+        color: white;
+    }
 }
 
 
 @media screen and (min-width: 768px) {
+    #header-logo {
+        svg {
+            max-width: 60%
+        }
+    }
+
     #hamburger-menu-icon {
         display: none!important;
     }
@@ -122,14 +140,5 @@ header {
 }
 
 @media screen and (min-width: 1200px) {
-    .donate-text {
-        font-size: 20px;
-        color: v.$white;
-    }
-    
-    #donate-button {
-        border: 1px solid v.$orange;
-        border-radius: 50px;
-        background-color: v.$orange;
-    }
+
 }
