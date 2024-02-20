@@ -147,3 +147,19 @@ footer {
         }
     }
 }
+
+@media screen and (min-width: 1200px) {
+    #sm-newsletter {
+        #newsletter-title {
+            font-size: 15px;
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    #sm-newsletter {
+        #newsletter-title {
+            font-size: 18px;
+        }
+    }
+}

@@ -76,19 +76,13 @@ header {
     flex-direction: column;
     border-radius: 20px;
     a {
-        margin: 40px;
+        margin: 20px;
         color: white;
     }
 }
 
 
 @media screen and (min-width: 768px) {
-    #header-logo {
-        svg {
-            max-width: 60%
-        }
-    }
-
     #hamburger-menu-icon {
         display: none!important;
     }
@@ -115,30 +109,24 @@ header {
             border-right: none;
         }
     }
+}
 
-    #about-menu {
-        right: 61%;
+@media screen and (min-width: 1200px) {
+    .donate-text {
+        font-size: 20px;
     }
 
-    #get-help-menu {
-        right: 51%;
-    }
-
-    #get-involved-menu {
-        right: 32%;
-    }
-
-    @media screen and (min-width: 1200px) {
-        #about-menu {
-            right: 56%;
-        }
-
-        #get-involved-menu {
-            right: 35%;
+    #explore-menu {
+        a {
+            margin: 30px;
         }
     }
 }
 
-@media screen and (min-width: 1200px) {
-
+@media screen and (min-width: 1920px) {
+    #explore-menu {
+        a {
+            margin: 40px;
+        }
+    }
 }
