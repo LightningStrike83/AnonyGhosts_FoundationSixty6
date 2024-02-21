@@ -69,6 +69,24 @@ label {
     font-weight: 500;
 }
 
+.donate-box-text {
+    font-size: 20px;
+}
+
+#emergency-phone {
+    h3 {
+        font-size: 14px;
+        color: white!important;
+        text-align: center!important;
+    }
+
+    p {
+        font-size: 12px;
+        color: white!important;
+        text-align: center!important;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .hero-text {
         font-size: 40px;
@@ -77,6 +95,27 @@ label {
     h3 {
         text-align: left;
     }
+
+    .reason-box  {
+        h3 {
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+    }
+
+    #emergency-phone {
+        h3 {
+            font-size: 18px;
+        }
+    
+        p {
+            font-size: 16px;
+        }
+    }
+    
 }
 
 @media screen and (min-width: 1200px) {
@@ -86,7 +125,7 @@ label {
     }
 
     .hero-text {
-        font-size: 40px;
+        font-size: 60px;
     }
 
     h3 {
@@ -105,6 +144,27 @@ label {
             font-size: 25px;
         }
     }
+
+    .reason-box  {
+        h3 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+    }
+
+    #emergency-phone {
+        h3 {
+            font-size: 20px;
+        }
+    
+        p {
+            font-size: 18px;
+        }
+    }
+    
 }
 
 @media screen and (min-width: 1920px) {
@@ -133,4 +193,25 @@ label {
             font-size: 30px;
         }
     }
+
+    .reason-box  {
+        h3 {
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 25px;
+        }
+    }
+
+    #emergency-phone {
+        h3 {
+            font-size: 24px;
+        }
+    
+        p {
+            font-size: 22px;
+        }
+    }
+    
 }

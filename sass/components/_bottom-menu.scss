@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as v;
+
 #bottom-menu {
     background-color: transparent;
     bottom: 0;
@@ -41,11 +43,29 @@
 
 #emergency-phone {
     order: -2;
+    display: flex;
+    align-items: center;
 }
 
-@media screen and (min-width) {
+#emergency-phone p:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+
+#number-window {
+    position: absolute;
+    right: 12.5%;
+    padding: 15px;
+    background-color: v.$blue;
+    border-radius: 20px;
+}
+
+@media screen and (min-width: 768px) {
     .botton-icon {
         margin-top: 10px;
         margin-bottom: 10px;
+    }
+
+    #emergency-phone p:not(:last-of-type) {
+        margin-bottom: 30px;
     }
 }
