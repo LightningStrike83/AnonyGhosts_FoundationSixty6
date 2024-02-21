@@ -2,7 +2,6 @@
 
 body {
     position: relative;
-    background-color: v.$white;
 }
 
 .line-break {
@@ -17,6 +16,30 @@ body {
         align-content: center;
         flex-wrap: wrap;
         border-radius: 20px;
+        height: 405px;
+        margin-bottom: 45px;
+}
+
+input {
+    height: 40px;
+    border: none;
+}
+
+textarea {
+    height: 80px;
+    border: none;
+    margin-bottom: 30px;
+}
+
+.send-button {
+    width: 130px;
+    border: 0;
+    background-color: v.$blue;
+    text-align: center;
+    color: white;
+    border-radius: 25px;
+    align-self: center;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {

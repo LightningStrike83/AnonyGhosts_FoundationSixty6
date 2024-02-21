@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as v;
+
 #contact-hero {
     div {
         background-image: url(../images/hero-images/contact-hero.jpg);
@@ -5,100 +7,148 @@
 }
 
 #need-support {
+    margin-bottom: 50px;
     h3 {
-        margin-bottom: 30px;
+        margin-bottom: 12px;
     }
 }
 
 #support-number {
     text-align: center;
-    margin-bottom: 85px;
+    margin-bottom: 50px;
     div {
-        background-color: green;
+        border-radius: 20px;
+        padding-left: 45px;
+        padding-right: 45px;
+        background-color: v.$green;
         h3 {
+            margin-top: 35px;
             margin-bottom: 15px;
-        }
-        p {
-            color: blue;
         }
     }
     
 }
 
+.number-con {
+    padding: 0!important;
+    margin-bottom: 30px;
+    p {
+        margin-bottom: 10px;
+    }
+}
+
+.support-break {
+    border-bottom: 1px solid v.$blue;
+}
+
+#contact-text {
+    p {
+        margin-bottom: 20px;
+    }
+}
+
 #contact-contact {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 30px;
+    #contact-con {
+        background-color: v.$green;
+        padding-bottom: 10px;
+    }
     h3 {
         margin-bottom: 20px;
     }
 }
 
+#form-desc {
+    margin-top: 5px;
+}
+
 #contact-page-form {
-    background-color: green;
-    margin-top: 40px;
-    padding-top: 40px;
+    margin-top: 50px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    text-align: left;
 }
 
-#contact-send {
-    border: 0;
-    background-color: orange;
-    text-align: center;
-    color: white;
-    border-radius: 25px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    align-self: center;
-    cursor: pointer;
-}
-
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
     #contact-hero {
-        height: 405px;
-        margin-bottom: 60px;
-        div {
-            box-shadow: inset 0 0 0 405px rgba($color: #000000, $alpha: 0.3);
-        }
+        margin-bottom: 30px;
     }
 
-    #need-support {
-        margin-bottom: 85px;
+    #contact-hero, #need-support, #support-number, #contact-contact {
+        margin-bottom: 45px;
+    }
+
+    .support-break {
+        display: none;
     }
 
     #support-number {
         div {
-            padding-top: 40px;
-            padding-bottom: 40px;
-            border-radius: 20px;
-            h3, p {
-                font-size: 40px;
+            padding-left: 15px!important;
+            padding-right: 15px!important;
+        }
+        h3 {
+            text-align: center;
+        }
+    }
+
+    #help-numbers {
+        display: flex;
+        padding-left: 10px!important;
+        padding-right: 10px!important;
+    }
+
+    #contact-contact {
+        #contact-con {
+            background-color: transparent;
+        }
+
+        #form-con {
+            div {
+                border-radius: 20px;
+                background-color: v.$green;
+                padding-left: 8.25%;
+                padding-right: 8.25%;
             }
         }
     }
 
-    #contact-page-form {
-        margin-bottom: 85px;
-        p, input, textarea {
-            margin-left: 100px;
-            margin-right: 100px;
-        }
+    #contact-send {
+        margin-bottom: 20px;
+    }
+}
 
+@media screen and (min-width: 1200px) {
+    #contact-hero, #need-support, #support-number, #contact-contact {
+        margin-bottom: 55px;
+    }
+
+    #support-number {
+        div {
+            padding-left: 10px!important;
+            padding-right: 10px!important;
+        }
+    }
+
+    .number-con {
         p {
-            margin-bottom: 10px;
+            margin-bottom: 30px;
         }
+    }
+}
 
-        input, textarea {
-            max-width: 770px;
-            width: 100%;
-            border: none;
-            margin-bottom: 25px;
-            font-size: 40px;
-        }
+@media screen and (min-width: 1920px) {
+    #contact-hero, #need-support, #support-number, #contact-contact {
+        margin-bottom: 65px;
+    }
 
-        #contact-send {
-            max-width: 160px;
-            width: 100%;
-            font-size: 20px;
+    .number-con {
+        p {
+            margin-bottom: 36px;
         }
     }
 }

@@ -1,14 +1,21 @@
 @use "../abstracts/variables" as v;
 
-a, p, h3 {
+a, p, label {
     color: black;
-    font-family: 'Montserrat', 'Montserrat Alternates', Arial, sans-serif;
+    font-family: 'Lexend', 'Montserrat', Arial, sans-serif;
+    font-weight: 300;
+    line-height: 20px;
+}
+
+h3 {
+    font-family: 'Metropolis-Semibold', 'Montserrat Alternates', Arial, sans-serif;
+    text-align: center;
+    font-size: 30px;
 }
 
 a {
     text-decoration: none;
     transition: all ease-in-out 0.5s;
-    font-size: 20px;
     &:hover {
         text-decoration: underline;
     }
@@ -17,29 +24,113 @@ a {
     }
 }
 
-h3 {
-    font-weight: 700;
+label {
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
+.hero-text {
+    color: white;
+    font-size: 26px;
+    font-family: 'Metropolis-Semibold', 'Montserrat Alternates', Arial, sans-serif;
+}
+
+.donate-text, .send-button {
+    font-size: 15px;
+    font-family: 'Lexend', 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
+    color: white!important;
+}
+
+.nav-lightbox {
+    p, a {
+        font-family: 'Metropolis-Semibold', 'Montserrat Alternates', Arial, sans-serif;
+        font-size: 20px;
+        color: white;
+    }
+}
+
+.number-con {
+    h3 {
+        font-size: 15px;
+    }
+    p {
+        font-size: 10px;
+    }
+
+    .number {
+        font-weight: bold;
+        font-size: 15px;
+    }
+}
+
+#newsletter-send {
+    font-family: 'Lexend', 'Montserrat', Arial, sans-serif;
+    font-weight: 500;
+}
 
 @media screen and (min-width: 768px) {
-    a, p {
-        font-size: 13px;
+    .hero-text {
+        font-size: 40px;
+    }
+
+    h3 {
+        text-align: left;
     }
 }
 
 @media screen and (min-width: 1200px) {
     a, p {
-        font-size: 18px;
+        font-size: 20px;
+        line-height: 25px;
     }
 
     .hero-text {
-        font-size: 90px;
-        font-weight: 700;
-        color: white;
+        font-size: 40px;
     }
 
     h3 {
-        font-size: 35px;
+        font-size: 40px;
+    }
+
+    .number-con {
+        h3 {
+            font-size: 25px;
+        }
+        p {
+            font-size: 15px;
+        }
+    
+        .number {
+            font-size: 25px;
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    a, p {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .hero-text {
+        font-size: 80px;
+    }
+
+    h3 {
+        font-size: 60px;
+    }
+
+    .number-con {
+        h3 {
+            font-size: 30px;
+        }
+        p {
+            font-size: 25px;
+        }
+    
+        .number {
+            font-size: 30px;
+        }
     }
 }
