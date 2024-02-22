@@ -42,10 +42,30 @@ textarea {
     cursor: pointer;
 }
 
+section {
+    margin-bottom: 35px!important;
+}
+
 @media screen and (min-width: 768px) {
     .line-break {
         border-bottom: none;
         border-right: 1px solid black;
         height: 20px;
+    }
+
+    section {
+        margin-bottom: 45px!important;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    section {
+        margin-bottom: 55px!important;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    section {
+        margin-bottom: 65px!important;
     }
 }

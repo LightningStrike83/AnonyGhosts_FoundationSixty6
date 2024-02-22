@@ -13,6 +13,23 @@ export function bottomMenu() {
         }
     ]
 
+    let emergencynumbers = [
+        {
+            name: "Kids Help Phone",
+            number: "1-800-668-6868"
+        },
+
+        {
+            name: "Good2Talk",
+            number: "1-866-925-5454"
+        },
+
+        {
+            name: "Crisis Support",
+            number: "9-8-8"
+        }
+    ]
+
     function openBottomMenu() {
         if (this.id === "activation-button") {
             let buttonTemplate = document.querySelector("#button-template")
@@ -35,15 +52,43 @@ export function bottomMenu() {
             })
 
             {
-                let darkButton = document.querySelector("#dark-mode")
-                let phoneButton = document.querySelector("#emergency-phone")
+                let darkButton = document.querySelector("#dark-mode img")
+                let phoneButton = document.querySelector("#emergency-phone img")
 
                 function darkMode() {
 
                 }
 
                 function openNumbers() {
+                    if (this.classList.contains("phone-clicked")) {
+                        let numberWindow = document.querySelector("#number-window")
+                        const emergencyDiv = document.querySelector("#emergency-phone")
+                        phoneButton.classList.remove("phone-clicked")
 
+                        numberWindow.remove()
+                        
+                    } else {
+                        const div = document.createElement('div')
+                        const emergencyDiv = document.querySelector("#emergency-phone")
+
+                        phoneButton.classList.add("phone-clicked")
+                        
+                        emergencynumbers.forEach(emergency => {
+                            const emergencyTitle = document.createElement('h3')
+                            const emergencyNumber = document.createElement('p')
+
+                            emergencyTitle.textContent = emergency.name
+                            emergencyNumber.textContent = emergency.number
+
+                            div.appendChild(emergencyTitle)
+                            div.appendChild(emergencyNumber)
+                        })
+                        
+                        div.setAttribute("id", "number-window")
+                        emergencyDiv.appendChild(div)
+                    }
+
+                                       
                 }
 
                 darkButton.addEventListener("click", darkMode)

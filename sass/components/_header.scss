@@ -5,6 +5,7 @@ header {
     position: sticky;
     top: 0;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #header-con {
@@ -15,10 +16,9 @@ header {
 #header-logo {
     text-align: center;
     align-self: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
     svg {
         max-width: 60%;
+        padding-top: 5px;
     }
 }
 
@@ -29,8 +29,6 @@ header {
     padding-bottom: 15px;
     background-color: v.$blue;
     border-radius: 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 #hamburger-menu-icon {
@@ -70,7 +68,7 @@ header {
 #explore-menu {
     position: absolute;
     background-color: v.$blue;
-    top: 90px;
+    top: 60px;
     left: 40%;
     display: none;
     flex-direction: column;
