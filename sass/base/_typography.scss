@@ -5,6 +5,7 @@ a, p, label {
     font-family: 'Lexend', 'Montserrat', Arial, sans-serif;
     font-weight: 300;
     line-height: 20px;
+    font-size: 12px;
 }
 
 h3 {
@@ -87,6 +88,11 @@ label {
     }
 }
 
+.member-name {
+    font-size: 15px;
+    font-weight: 600;
+}
+
 @media screen and (min-width: 768px) {
     .hero-text {
         font-size: 40px;
@@ -116,6 +122,9 @@ label {
         }
     }
     
+    .member-name {
+        font-size: 18px;
+    }
 }
 
 @media screen and (min-width: 1200px) {
