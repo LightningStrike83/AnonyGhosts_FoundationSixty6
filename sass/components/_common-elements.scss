@@ -17,7 +17,6 @@ body {
         align-content: center;
         flex-wrap: wrap;
         height: 405px;
-        margin-bottom: 45px;
 }
 
 input {
@@ -46,7 +45,23 @@ section {
     margin-bottom: 35px!important;
 }
 
+.custom-button {
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: v.$blue;
+    border-radius: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: white!important;
+    font-size: 17px;
+}
+
 @media screen and (min-width: 768px) {
+    .hero-image {
+        height: 315px;
+    }
+
     .line-break {
         border-bottom: none;
         border-right: 1px solid black;
@@ -56,16 +71,49 @@ section {
     section {
         margin-bottom: 45px!important;
     }
+
+    .custom-button {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 12px;
+        font-weight: 400;
+    }
 }
 
 @media screen and (min-width: 1200px) {
+    .hero-image {
+        height: 500px;
+    }
+
     section {
         margin-bottom: 55px!important;
+    }
+
+    .custom-button {
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 20px;
     }
 }
 
 @media screen and (min-width: 1920px) {
     section {
         margin-bottom: 65px!important;
+    }
+
+    .custom-button {
+        padding-left: 70px;
+        padding-right: 70px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        font-size: 25px;
+    }
+
+    .hero-image {
+        height: 700px;
     }
 }
