@@ -12,6 +12,7 @@ h3 {
     font-family: 'Metropolis-Semibold', 'Montserrat Alternates', Arial, sans-serif;
     text-align: center;
     font-size: 30px;
+    margin-bottom: 10px;
 }
 
 a {
@@ -91,6 +92,18 @@ label {
 .member-name {
     font-size: 15px;
     font-weight: 600;
+}
+
+#week-info {
+    #presents-title {
+        text-align: center;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    h3 {
+        font-size: 40px;
+    }
 }
 
 @media screen and (min-width: 768px) {
