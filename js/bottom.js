@@ -56,7 +56,20 @@ export function bottomMenu() {
                 let phoneButton = document.querySelector("#emergency-phone img")
 
                 function darkMode() {
+                    if (document.body.style.backgroundColor = "#ffffff") {
+                        let darkModeText = document.querySelectorAll(".dmt")
 
+                        document.body.style.backgroundColor = "#222222"
+
+                        darkModeText.forEach(dmt => {
+                            dmt.style.color = "#ffffff"
+                        })
+
+
+                    } else {
+                        document.body.style.backgroundColor = "#ffffff"
+                        console.log("boo")
+                    }
                 }
 
                 function openNumbers() {
