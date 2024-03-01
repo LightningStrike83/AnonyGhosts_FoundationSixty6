@@ -3,18 +3,24 @@ export function factsInfo() {
 
     let facts = [
         {
-            fiction: "A fiction",
-            fact: "BLAH",
+            fiction: "Mental illness is a sign of personal weakness.",
+            fact: "Mental illnesses are medical conditions, not character flaws. They can affect anyone regardless of their strength, intelligence, or willpower. Just like physical illnesses, mental illnesses require proper treatment and support.",
+            bgi: "monstera.png",
+            bgc: "#D7BA64"
         },
 
         {
-            fiction: "A fiction",
-            fact: "BLAH BLAH",
+            fiction: "People with mental illness are violent and dangerous.",
+            fact: "The vast majority of individuals with mental illness are not violent. In fact, they are more likely to be victims of violence rather than perpetrators.",
+            bgi: "succulent.png",
+            bgc: "#84779B"
         },
 
         {
-            fiction: "A fiction",
-            fact: "BLAH BLAH BLAH",
+            fiction: "Seeking help for mental illness is a sign of weakness or failure.",
+            fact: "Seeking help for mental health issues is a sign of strength and courage. It takes bravery to acknowledge when you're struggling and to reach out for support. Just like seeking medical help for a physical illness, seeking treatment for mental illness is essential for recovery and well-being.",
+            bgi: "split-leaf.png",
+            bgc: "#D47E82"
         },
     ]
 
@@ -27,6 +33,7 @@ export function factsInfo() {
             let facttext = document.createElement("p")
             let fictiontext = document.createElement("p")
             let textdiv = document.createElement("div")
+            let shadowdiv = document.createElement("div")
 
             fictiondiv.setAttribute("class", "fiction-box")
             factdiv.setAttribute("class", "fact-box")
@@ -35,6 +42,9 @@ export function factsInfo() {
             fictiontitle.setAttribute("class", "fiction-title")
             fictiontext.setAttribute("class", "fiction-text")
             textdiv.setAttribute("class", "ff-div")
+            textdiv.style.backgroundImage = `url(../images/drawings/${fact.bgi})`
+            textdiv.style.backgroundColor = fact.bgc
+            shadowdiv.setAttribute("class", "shader")
 
             facttext.textContent = fact.fact
             fictiontext.textContent = fact.fiction
@@ -48,6 +58,7 @@ export function factsInfo() {
 
             textdiv.appendChild(fictiondiv)
             textdiv.appendChild(factdiv)
+            textdiv.appendChild(shadowdiv)
             factsArea.appendChild(textdiv)
         })
     }

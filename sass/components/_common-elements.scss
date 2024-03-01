@@ -44,7 +44,7 @@ textarea {
 }
 
 section {
-    margin-bottom: 35px!important;
+    margin-bottom: 30px!important;
 }
 
 .custom-button {
@@ -57,6 +57,40 @@ section {
     padding-bottom: 15px;
     color: white!important;
     font-size: 17px;
+    transition: all ease-in-out 0.5s;
+    &:hover {
+        background-color: v.$green;
+    }
+}
+
+.shader {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 35%;
+    position: absolute;
+}
+
+video {
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+
+.divider {
+    border-bottom: 2px solid v.$green;
+    margin-bottom: 30px;
+}
+
+.form-style {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    input {
+        width: 100%;
+    }
+
+    #message {
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -71,7 +105,7 @@ section {
     }
 
     section {
-        margin-bottom: 45px!important;
+        margin-bottom: 35px!important;
     }
 
     .custom-button {
@@ -82,6 +116,10 @@ section {
         font-size: 12px;
         font-weight: 400;
     }
+
+    .divider {
+        margin-bottom: 35px;
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -90,7 +128,7 @@ section {
     }
 
     section {
-        margin-bottom: 55px!important;
+        margin-bottom: 40px!important;
     }
 
     .custom-button {
@@ -101,15 +139,23 @@ section {
         font-size: 20px;
     }
 
+    video {
+        margin-bottom: 50px;
+    }
+
     label {
         font-size: 20px;
         font-weight: 400;
+    }
+
+    .divider {
+        margin-bottom: 40px;
     }
 }
 
 @media screen and (min-width: 1920px) {
     section {
-        margin-bottom: 65px!important;
+        margin-bottom: 45px!important;
     }
 
     .custom-button {
@@ -126,5 +172,9 @@ section {
 
     label {
         font-size: 24px;
+    }
+
+    .divider {
+        margin-bottom: 45px;
     }
 }

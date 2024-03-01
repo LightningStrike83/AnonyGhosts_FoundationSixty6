@@ -21,11 +21,16 @@ footer {
     margin-bottom: 50px;
     svg {
         max-height: 50px;
+        transition: all ease-in-out 0.5s;
+        &:hover {
+            opacity: 70%;
+        }
     }
 }
 
 #footer-links {
     margin-bottom: 50px;
+    transition: all ease-in-out 0.5s;
     ul {
         display: flex;
         flex-wrap: wrap;
@@ -37,6 +42,9 @@ footer {
         text-align: center;
         a {
             color: white;
+            &:hover {
+                color: v.$green;
+            }
         }
     }
 }
@@ -94,6 +102,11 @@ footer {
         background-color: v.$dark-green;
         align-self: flex-end;
         margin-left: 10%;
+        cursor: pointer;
+        transition: all ease-in-out 0.5s;
+        &:hover {
+            background-color: v.$sky-blue;
+        }
     }
 }
 

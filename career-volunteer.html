@@ -149,17 +149,23 @@
         <div class="col-span-full hero-image">
             <p class="hero-text">Careers and Volunteer Opportunities</p>
         </div>
+
+        <div class="shader"></div>
     </section>
 
     <section id="cv-text-con" class="grid-con">
         <div id="cv-text" class="col-span-full m-col-start-2 m-col-end-7">
-            <h3 class="dmt">WHY VOLUNTEER WITH US?</h3>
+            <h3 class="dmt">WHY VOLUNTEER FOR US?</h3>
             <p class="dmt">Volunteer with Foundation Sixty6 to directly impact youth mental health. Your commitment enhances access to mental healthcare for young individuals facing conditions like psychosis, bipolar disorder, and schizophrenia. Join us in creating a brighter, more resilient future for youth.</p>
             <a href="#volunteer-opportunities" class="custom-button">View Listings</a>
         </div>
 
         <div id="cv-image" class="col-span-full m-col-span-6"></div>
     </section>
+
+    <div class="grid-con">
+      <div class="col-span-full divider"></div>
+    </div>
 
     <section id="cv-build" class="grid-con">
         <div id="build-text" class="col-span-full m-col-start-7 m-col-end-12">
@@ -171,11 +177,15 @@
         <div id="build-image" class="col-span-full m-col-span-6"></div>
     </section>
 
-    <section id="cv-rewards" class="grid-con">
+    <div class="grid-con">
+      <div class="col-span-full divider"></div>
+    </div>
+
+    <!-- <section id="cv-rewards" class="grid-con">
         <div id="cv-rewards-con" class="col-span-full hero-image">
             <p class="hero-text">Rewards For Volunteering</p>
         </div>
-    </section>
+    </section> -->
 
     <section id="cv-opportunities" class="grid-con">
         <div id="opportunities-title" class="col-span-full">
@@ -246,7 +256,10 @@
                 <h3 class="reference-number"></h3>
                 <p class="c-position"></p>
             </div>-->
-
+    <div class="grid-con">
+      <div class="col-span-full divider"></div>
+    </div>
+    
     <div id="cv-form-text" class="grid-con">
         <p class="col-span-full m-col-start-2 m-col-end-12 dmt">
             Fill out the form below with your information and the reference number of the opportunity you are applying for.
@@ -257,15 +270,24 @@
         <div id="cv-contact">
             <div id="cv-form-con" class="grid-con">
               <div id="cv-form-t" class="col-span-full m-col-start-2 m-col-end-12">
-                <form id="cv-page-form" method="post" action="sendmail.php">
-                    <label for="full-name">Full Name*</label>
-                    <input id="full-name" name="full-name" type="text" placeholder="Your Full Name"><br><br>
-                    <label for="email">Email*</label>
-                    <input id="email" name="email" type="text" placeholder="Your Email"><br><br>
-                    <label for="ref-no">Reference Number*</label>
-                    <input id="ref-no" name="ref-no" type="text" placeholder="#"><br><br>
-                    <label for="message">Tell Us Something About Yourself</label>
-                    <textarea id="message" name="message"></textarea>
+                <form id="cv-page-form" method="post" action="">
+                  <div class="form-style">
+                    <label for="full-name">Full Name*</label><br><br>
+                    <input id="full-name" name="full-name" type="text" placeholder="Your Full Name"><br><br><br>
+                  </div>
+                  <div class="form-style">
+                    <label for="email">Email*</label><br><br>
+                    <input id="email" name="email" type="text" placeholder="Your Email"><br><br><br>
+                  </div>
+                  <div class="form-style">
+                    <label for="ref-no">Reference Number*</label><br><br>
+                    <input id="ref-no" name="ref-no" type="text" placeholder="#"><br><br><br>
+                  </div>
+                  <div class="form-style">
+                    <label for="message">Tell Us Something About Yourself*</label><br><br>
+                    <textarea id="message" name="message"></textarea><br><br>
+                  </div>
+
                     <input id="cv-send" class="send-button" type="submit" value="Submit" >
                 </form>
               </div>
@@ -364,7 +386,7 @@
   
       <section id="bottom-menu">
         <div id="activation-button">
-          <img class="bottom-icon" src="images/icons/image-icon.svg" alt="Menu Icon">
+          <img class="bottom-icon" src="images/icons/information2.png" alt="Menu Icon">
         </div>
         
         <template id="button-template">

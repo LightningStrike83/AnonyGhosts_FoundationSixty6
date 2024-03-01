@@ -146,9 +146,14 @@
     </header>
 
     <section id="donate-hero" class="full-width-grid-con">
-        <div class="col-span-full hero-image">
+        <div id="donate-inside" class="col-span-full hero-image">
             <p class="hero-text">Contribute Now,<br> Make An Everlasting Impact</p>
+            <div id="donate-gfe-redirect">
+              <a class="custom-button" href="">Donate Now</a>
+            </div>
         </div>
+
+        <div class="shader"></div>
     </section>
 
     <section id="donate-why" class="grid-con">
@@ -176,17 +181,50 @@
         </div>
     </section>
 
+    <div class="grid-con">
+      <div class="col-span-full divider"></div>
+    </div>
+
     <section id="donate-video" class="grid-con">
-        <div class="col-span-full m-col-start-2 m-col-end-12">
-            <p>VIDEO GOES HERE</p>
+        <div id="video-text" class="col-span-full m-col-start-2 m-col-end-12">
+            <h3>Video Testimonials</h3>
+            <p>Select an image to load a video and hear why it's important to donate and support the advancement of mental health!</p>
+        </div>
+
+        <a href="#donate-video-con" class="col-span-2 m-col-start-2 m-col-span-5">
+          <div>
+            <div id="counsellor-video" class="video-image"></div>
+            <p>A Counsellor's Perspective</p>
+          </div>
+        </a>
+
+        <a href="#donate-video-con" class="col-span-2 m-col-span-5">
+          <div>
+            <div id="youth-video" class="video-image"></div>
+            <p>A Youth's Wish</p>
+          </div>
+        </a>
+
+        <div id="donate-video-con" class="col-span-full">
+          <video id="video-source" controls src=""></video>
         </div>
     </section>
+
+    <div class="grid-con">
+      <div class="col-span-full divider"></div>
+    </div>
 
     <section id="tie-dye-info" class="grid-con">
       <div class="col-span-full xl-col-start-2 xl-col-end-12">
         <p>Any contributor who donates $75 or more will receive a special, hand-made tie-dye t-shirt made by some of the members of Foundation Sixty6.</p>
       </div>
+
+      <div class="shader"></div>
     </section>
+
+    <div class="grid-con">
+      <div class="col-span-full divider"></div>
+    </div>
 
     <section id="donate-ways" class="grid-con">
         <div id="donate-text-con" class="col-span-full">
@@ -194,16 +232,18 @@
             <p>Your kind donation can be life-changing for people going through hard times. </p>
         </div>
 
-        <a id="donate-gofundme" href="" class="col-span-full m-col-start-2 m-col-end-7">
-            <div class="ways-con"></div>
+        <a href="" id="gfe-box" class="col-span-full m-col-start-2 m-col-end-7 donate-box">
+          <div id="donate-gofundme" class="donate-image-box">
+          </div>
+          <h3 id="gfm-text" class="col-span-full m-col-start-2 m-col-end-7 donate-box-text">GoFundMe</h3>
         </a>
-        <h3 class="col-span-full m-col-start-2 m-col-end-7 donate-box-text">GoFundMe</h3>
 
-        <a id="donate-volunteer" href="" class="col-span-full m-col-start-7 m-col-end-12">
-            <div class="ways-con">
-            </div>
-        </a>
-        <h3 class="col-span-full m-col-start-7 m-col-end-12 donate-box-text">Volunteer</h3>
+        <a href="career-volunteer.html" id="volunteer-box" class="col-span-full m-col-start-7 m-col-end-12 donate-box">
+          <div id="donate-volunteer" class="donate-image-box">
+          </div>
+          <h3 class="donate-box-text">Volunteer</h3>
+        </div>
+        
     </section>
 
     <footer class="full-width-grid-con">
@@ -297,7 +337,7 @@
 
     <section id="bottom-menu">
       <div id="activation-button">
-        <img class="bottom-icon" src="images/icons/image-icon.svg" alt="Menu Icon">
+        <img class="bottom-icon" src="images/icons/information2.png" alt="Menu Icon">
       </div>
       
       <template id="button-template">

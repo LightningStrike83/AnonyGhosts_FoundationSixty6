@@ -1,7 +1,10 @@
 @use "../abstracts/variables" as v;
 
 #blog-hero {
-    background-color: v.$sky-blue;
+    background-image: url(../images/hero-images/blog.jpg);
+    position: relative;
+    background-size: cover;
+    background-position: 0 65%;
 }
 
 #blog-recent-title h3 {
@@ -20,13 +23,15 @@
     align-items: stretch;
     transition: all ease-in-out 0.5s;
     &:hover {
-        background-color: v.$sky-blue;
+        background-color: v.$green;
+        opacity: 70%;
     }
 }
 
 .blog-pic {
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
     height: 130px;
     margin-bottom: 10px;
 }

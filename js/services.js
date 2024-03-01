@@ -11,7 +11,7 @@ export function services() {
 
         {
             title: "Counseling Services",
-            icon: "images/dummy.jpg",
+            icon: "images/talk.svg",
             desc: "Provide individual or group counseling sessions facilitated by trained mental health professionals to address specific mental health concerns.",
             link: "Contact Us",
             linkpath: "contact.html",
@@ -19,7 +19,7 @@ export function services() {
 
         {
             title: "Resource and Referral",
-            icon: "images/dummy.jpg",
+            icon: "images/idea.svg",
             desc: "Provide information on mental health resources, treatment options, and referrals to other relevant services in the community.",
             link: "Contact Us",
             linkpath: "contact.html",
@@ -27,7 +27,7 @@ export function services() {
 
         {
             title: "Education Programs",
-            icon: "images/dummy.jpg",
+            icon: "images/teach.svg",
             desc: "Conduct workshops, seminars, and awareness campaigns to educate the public, schools, and workplaces about mental health issues, reducing stigma, and promoting mental well-being.",
             link: "Learn More",
             linkpath: "events.html",
@@ -35,7 +35,7 @@ export function services() {
 
         {
             title: "Employment & Vocational Support",
-            icon: "images/dummy.jpg",
+            icon: "images/employ.svg",
             desc: "Offer programs that help individuals with mental health challenges find and maintain employment, providing vocational training and support.",
             link: "Learn More",
             linkpath: "career-volunteer.html",
@@ -43,7 +43,7 @@ export function services() {
 
         {
             title: "Helpline Services",
-            icon: "images/dummy.jpg",
+            icon: "images/chat.svg",
             desc: "Offer a confidential 24/7 phone, text, or online support service for immediate assistance, crisis intervention, and emotional support.",
             link: "Learn More",
             linkpath: "contact.html",
@@ -51,7 +51,7 @@ export function services() {
 
         {
             title: "Community-Based Programs",
-            icon: "images/dummy.jpg",
+            icon: "images/unity.png",
             desc: "Establish residential facilities or community-based programs that offer a supportive environment for individuals with severe mental health conditions.",
             link: "Learn More",
             linkpath: "events.html",

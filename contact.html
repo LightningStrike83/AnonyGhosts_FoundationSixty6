@@ -149,18 +149,20 @@
         <div class="col-span-full hero-image">
             <p class="hero-text">CONTACT US</p>
         </div>
+
+        <div class="shader"></div>
     </section>
 
     <section id="need-support" class="grid-con">
         <div class="col-span-full m-col-start-2 m-col-end-11">
             <h3>Need Support?</h3>
-            <p>If you are seeking support for complex mental health conditions, including bipolar disorder, schizophrenia, or psychotic depression, or if you are supporting a friend or family member facing these challenges, we’re here to assist. <br><br> Our services include free counseling, peer support, and referrals to ensure you receive the appropriate help and guidance tailored to your specific needs.</p>
+            <p>If you are seeking support for complex mental health conditions, including bipolar disorder, schizophrenia, or psychotic depression, or if you are supporting a friend or family member facing these challenges, we’re here to help. <br><br>We will connect you to a fitting mental healthcare provider based on your situation, as well as provide financial aid.</p>
         </div>
     </section>
 
     <section id="support-number" class="grid-con">
         <div class="col-span-full m-col-start-2 m-col-end-12">
-            <h3 id="helpline">HELPLINE NUMBERS</h3>
+            <h3 id="helpline">Need Support Right Now?</h3>
             <div id="help-numbers">
               <div class="number-con">
                 <h3>Kids Help Phone</h3>
@@ -188,25 +190,38 @@
         </div>
     </section>
 
+    <div class="grid-con">
+      <div class="col-span-full divider"></div>
+    </div>
+
     <section id="contact-text" class="grid-con">
-      <h3 class="col-span-full m-col-start-2 m-col-end-12">General Inquiry?</h3>
-      <p class="col-span-full m-col-start-2 m-col-end-12" id="form-desc">If you have any questions or need further assistance, please fill up the form below.</p>
+      <h3 class="col-span-full m-col-start-2 m-col-end-12">Inquiries</h3>
+      <p class="col-span-full m-col-start-2 m-col-end-12" id="form-desc">If you have any questions or are seeking support, please fill out the form below.</p>
     </section>
 
     <section id="contact-contact">
       <div id="contact-con">
         <div id="form-con" class="grid-con">
           <div class="col-span-full m-col-start-2 m-col-end-12">
-            <form id="contact-page-form" method="post" action="sendmail.php">
-                <label for="full-name">Full Name*</label>
-                <input id="full-name" name="full-name" type="text" placeholder="Your Full Name"><br><br>
-                <label for="email">Email*</label>
-                <input id="email" name="email" type="text" placeholder="Your Email"><br><br>
-                <label for="subject">Subject*</label>
-                <input id="subject" name="subject" type="text" placeholder="Subject"><br><br>
-                <label for="message">Message*</label>
-                <textarea id="message" name="message" placeholder="Your Message Here"></textarea>
-                <input id="contact-send" class="send-button" type="submit" value="Submit" >
+            <form id="cv-page-form" method="post" action="">
+              <div class="form-style">
+                <label for="full-name">Full Name*</label><br><br>
+                <input id="full-name" name="full-name" type="text" placeholder="Your Full Name"><br><br><br>
+              </div>
+              <div class="form-style">
+                <label for="email">Email*</label><br><br>
+                <input id="email" name="email" type="text" placeholder="Your Email"><br><br><br>
+              </div>
+              <div class="form-style">
+                <label for="ref-no">Subject*</label><br><br>
+                <input id="ref-no" name="ref-no" type="text" placeholder="Subject"><br><br><br>
+              </div>
+              <div class="form-style">
+                <label for="message">Message*</label><br><br>
+                <textarea id="message" name="message"></textarea><br><br>
+              </div>
+
+                <input id="cv-send" class="send-button" type="submit" value="Submit" >
             </form>
           </div>
         </div>
@@ -304,7 +319,7 @@
   
       <section id="bottom-menu">
         <div id="activation-button">
-          <img class="bottom-icon" src="images/icons/image-icon.svg" alt="Menu Icon">
+          <img class="bottom-icon" src="images/icons/information2.png" alt="Menu Icon">
         </div>
         
         <template id="button-template">

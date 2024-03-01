@@ -1,4 +1,5 @@
 import { bottomMenu } from "./bottom.js";
+import { donateVideo } from "./donate.js";
 import { factsInfo } from "./facts.js";
 import { FAQ } from "./faq.js";
 import { hamburger } from "./hamburger.js";
@@ -15,6 +16,10 @@ if (document.body.dataset.page === 'services') {
 
 if (document.body.dataset.page === 'home') {
     factsInfo();
+}
+
+if (document.body.dataset.page === 'donate') {
+    donateVideo();
 }
 
 hamburger();

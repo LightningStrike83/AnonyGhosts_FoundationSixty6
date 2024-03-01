@@ -1,9 +1,11 @@
 @use "../abstracts/variables" as v;
 
 #contact-hero {
-    div {
-        background-image: url(../images/hero-images/contact-hero.jpg);
-    }
+    background-image: url(../images/hero-images/contact.jpg);
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 0 25%;
+    background-size: cover;
 }
 
 #need-support {
@@ -45,12 +47,6 @@
     border-bottom: 1px solid v.$blue;
 }
 
-#contact-text {
-    p {
-        margin-bottom: 20px;
-    }
-}
-
 #contact-contact {
     display: flex;
     flex-direction: column;
@@ -84,6 +80,10 @@
 
     #contact-hero, #need-support, #support-number, #contact-contact {
         margin-bottom: 45px;
+    }
+
+    #contact-text h3, #need-support div h3 {
+        text-align: center;
     }
 
     .support-break {
