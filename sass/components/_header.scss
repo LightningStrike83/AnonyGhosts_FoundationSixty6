@@ -22,6 +22,10 @@ header {
         max-width: 60%;
         padding-top: 15px;
         border-radius: 20px;
+        transition: all ease-in-out 0.5s;
+        &:hover {
+            opacity: 70%;
+        }
     }
 }
 
@@ -34,6 +38,10 @@ header {
     padding-bottom: 15px;
     background-color: v.$blue;
     border-radius: 50px;
+    transition: all ease-in-out 0.5s;
+    &:hover {
+        background-color: v.$green;
+    }
 }
 
 #hamburger-menu-icon {
@@ -58,6 +66,12 @@ header {
         margin-top: 10px;
         text-align: right;
         border-radius: 20px;
+        a {
+            transition: all ease-in-out 0.5s;
+            &:hover {
+                color: v.$green;
+            }
+        }
     }
     z-index: 10;
     position: absolute;
@@ -85,6 +99,10 @@ header {
     a {
         margin: 20px;
         color: white;
+        transition: all ease-in-out 0.5s;
+        &:hover {
+            color: v.$green;
+        }
     }
 }
 

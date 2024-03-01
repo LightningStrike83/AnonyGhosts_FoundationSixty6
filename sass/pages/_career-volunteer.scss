@@ -1,7 +1,11 @@
 @use "../abstracts/variables" as v;
 
 #cv-hero {
-    background-color: v.$sky-blue;
+    background-image: url(../images/hero-images/career.jpg);
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 #cv-text, #build-text {
@@ -20,8 +24,10 @@
     border-radius: 20px;
 }
 
-#cv-build {
-    background-color: v.$green;
+#cv-image {
+    background-image: url(../images/volunteer-paint.jpg);
+    background-position: 0 70%;
+    background-size: cover;
 }
 
 #build-text {
@@ -29,6 +35,9 @@
 }
 
 #build-image {
+    background-image: url(../images/career.jpg);
+    background-size: cover;
+    background-position: center;
     margin-bottom: 30px;
 }
 
@@ -93,7 +102,7 @@
     text-align: center;
     margin-bottom: 30px;
     #cv-contact {
-        background-color: v.$green;
+        background-color: v.$sky-blue;
         padding-bottom: 10px;
         grid-column: 2/3;
     }
@@ -175,7 +184,7 @@
 
         #cv-form-t {
             border-radius: 20px;
-            background-color: v.$green;
+            background-color: v.$sky-blue;
             padding-left: 8.25%;
             padding-right: 8.25%;
         }

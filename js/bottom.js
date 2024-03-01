@@ -56,6 +56,7 @@ export function bottomMenu() {
                 let phoneButton = document.querySelector("#emergency-phone img")
 
                 function darkMode() {
+                    //Note to Professor De Luca; this is still a WIP
                     if (document.body.style.backgroundColor = "#ffffff") {
                         let darkModeText = document.querySelectorAll(".dmt")
 
@@ -111,7 +112,7 @@ export function bottomMenu() {
             const closeButton = document.querySelector("#close-button")
             const cloneDivs = document.querySelectorAll(".clone-div")
 
-            activateImage.src = "images/icons/image-icon.svg"
+            activateImage.src = "images/icons/information2.png"
 
             closeButton.setAttribute("id", "activation-button")
 

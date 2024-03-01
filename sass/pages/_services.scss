@@ -1,5 +1,13 @@
 @use "../abstracts/variables" as v;
 
+#services-hero {
+    background-image: url(../images/hero-images/services.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 20%;
+    background-size: cover;
+    position: relative;
+}
+
 #services-title {
     p {
         text-align: center;

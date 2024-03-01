@@ -1,12 +1,18 @@
 @use "../abstracts/variables" as v;
 
 #donate-hero {
-    div {
-        background-image: url(../images/hero-images/contact-hero.jpg);
-    }
-    .hero-text {
-        text-align: center;
-        line-height: 40px;
+    background-image: url(../images/hero-images/donate.jpg);
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+
+#donate-inside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    #donate-gfe-redirect {
+        z-index: 5;
     }
 }
 
@@ -41,23 +47,58 @@
 }
 
 #donate-video {
-    height: 220px;
     text-align: center;
-    div {
-        background-color: v.$green;
+}
+
+.video-image {
+    height: 200px;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+    &:hover {
+        opacity: 70%;
+    }
+}
+
+#counsellor-video {
+    background-image: url(../images/counsellor.png);
+    background-position: 100%;
+    background-size: cover;
+}
+
+#youth-video {
+    background-image: url(../images/sophia.jpg);
+    background-position: 100%;
+    background-size: cover;
+}
+
+#donate-video-con {
+    padding-top: 50px;
+    display: none;
+}
+
+#video-text {
+    margin-bottom: 30px;
+    h3 {
+        text-align: center;
     }
 }
 
 #tie-dye-info {
     height: 493px;
-    background-color: v.$green;
+    background-image: url(../images/tye-shirt.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 20%;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     p {
+        z-index: 5;
         padding-left: 10%;
         padding-right: 10%;
         text-align: center;
+        color: white;
     }
 }
 
@@ -82,29 +123,42 @@
     display: flex;
 }
 
-#donate-gofundme {
-    background-image: url(../images/gofundme.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    height: 278px;
-    margin-bottom: 30px;
+.donate-box {
+    transition: all ease-in-out 0.5s;
+    border-radius: 20px;
+    cursor: pointer;
+    &:hover {
+        background-color: v.$green;
+        opacity: 70%;
+    }
 }
 
-#donate-volunteer {
-    background-image: url(../images/tiedye.jpg);
+.donate-image-box {
+    border-radius: 20px;
+}
+
+#donate-gofundme {
+    background-image: url(../images/gofundme.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 278px;
-    margin-top: 60px;
+    margin-bottom: 30px;
+    display: block;
+}
+
+#gfm-text {
     margin-bottom: 30px;
 }
 
-.ways-con {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#donate-volunteer {
+    background-image: url(../images/volunteer_hands.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 278px;
+    display: block;
+    margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -140,30 +194,23 @@
         }
     }
 
-    #donate-video {
-        height: 310px;
-    }
-
     #tie-dye-info {
         background-color: transparent;
         height: 320px;
         div {
             height: 100%;
-            background-color: v.$green;
             display: flex;
             align-items: center;
         }
     }
+
+    #gfm-text {
+        margin-bottom: 0;
+    }
 }
 
 @media screen and (min-width: 1200px) {
-    #donate-video, #tie-dye-info {
-        height: 500px;
-    }
 }
 
 @media screen and (min-width: 1920px) {
-    #donate-video, #tie-dye-info {
-        height: 800px;
-    }
 }

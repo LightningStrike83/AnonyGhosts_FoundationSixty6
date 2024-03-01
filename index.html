@@ -148,13 +148,15 @@
     <section id="home-hero" class="full-width-grid-con">
       <div id="home-con" class="grid-con">
         <div class="col-span-full hero-image">
-          <p class="hero-text">Fostering Minds, Building Mental Resilience</p>
+          <p class="hero-text">Fostering Minds,<br> Building Mental Resilience</p>
         </div>
 
         <div id="home-hero-supplementary-text" class="m-col-start-3 m-col-span-8">
-          <p>Dedicated to youth mental health, working to bridge the gaps in mental health services, and foster futures for youth.</p>
+          <p>We are Foundation Sixty6, a beacon of hope for youth mental health, dedicated to bridging the gaps in mental health services and, fostering a future of resilience and well-being.</p>
         </div>
       </div>
+
+      <div class="shader"></div>
   </section>
 
     <section id="who-are-we" class="grid-con">
@@ -167,22 +169,40 @@
       <div id="waw-image" class="col-span-full m-col-span-5"></div>
     </section>
 
-    
+    <div class="grid-con">
+      <div class="col-span-full divider"></div>
+    </div>
+
+    <section id="home-video-con" class="grid-con">
+      <div id="home-video-title" class="col-span-full m-col-start-2 m-col-span-10">
+        <h3>Our History</h3>
+      </div>
+      <div id="home-video" class="col-span-full m-col-start-2 m-col-span-10">
+        <video controls src="video/footage1.MOV"></video>
+      </div>
+      <div id="hvc-button" class="col-span-full">
+        <a href="about.html" class="custom-button">Learn More</a>
+      </div>
+    </section>
+
+    <div class="grid-con">
+      <div class="col-span-full divider"></div>
+    </div>
+
     <section id="home-facts" class="full-width-grid-con">
       <div id="fact-wrapper" class="grid-con">
         <div id="facts-text" class="col-span-full">
           <h3>FACT VS FICTION</h3>
-          <p>We hear a lot of misconception and myths about mental health. We are here to remove it.</p>
-          <p id="home-instructions">Click over the cards to reveal facts</p>
+          <p>We hear a lot of misconceptions and myths about mental health. We are here to remove it.</p>
+          <p id="home-instructions">Hover over the cards to reveal facts</p>
         </div>
-  
         <div id="fact-con" class="col-span-full"></div>
       </div>
     </section>
 
-    <section id="home-video-con" class="grid-con">
-      <div id="home-video" class="col-span-full m-col-start-2 m-col-span-10"><h3>FINLAND</h3></div>
-    </section>
+    <div class="grid-con">
+      <div class="col-span-full divider"></div>
+    </div>
 
     <section id="mental-illness-con" class="full-width-grid-con">
       <div id="mi-wrapper" class="grid-con">
@@ -194,21 +214,22 @@
         </div>
 
         <div id="mental-health-cards" class="col-span-full">
-          <a class="mi-link" href="blog.html">
-            <div class="mental-health-info">
-              <h3>Bipolar Disorder</h3>
-            </div>
-          </a>
 
-          <a class="mi-link" href="blog.html">
-            <div class="mental-health-info">
-              <h3>Psychotic Depression</h3>
-            </div>
-          </a>
-
-          <a class="mi-link" href="blog.html">
-            <div class="mental-health-info">
+          <a class="mi-link" href="blog-post.html">
+            <div id="s-div" class="mental-health-info">
               <h3>Schizophrenia</h3>
+            </div>
+          </a>
+
+          <a class="mi-link" href="blog-post.html">
+            <div id="pd-div" class="mental-health-info">
+              <h3>Psychosis</h3>
+            </div>
+          </a>
+
+          <a class="mi-link" href="blog-post.html">
+            <div id="bp-div" class="mental-health-info">
+              <h3>Bipolar Disorder</h3>
             </div>
           </a>
         </div>
@@ -225,32 +246,40 @@
     
     Note For MJ: The reason why I wrote the code this way is because if the foundation focuses more on mental illnesses, it will dynamically populate an image for them. It's easier to write the code for you too this way. Everything else is looked after in the SASS.-->
 
+    <div class="grid-con">
+      <div class="col-span-full divider"></div>
+    </div>
+
     <section id="home-services" class="grid-con">
       <div id="home-services-text" class="col-span-full">
         <h3>Explore Around The Site</h3>
       </div>
 
       <a href="get-services.html" class="col-span-full m-col-start-2 m-col-span-5 home-link">
-        <div class="home-redirect" id="service-redirect">
+        <div class="home-redirect" id="services-redirect">
           <h3 class="redirect-title">Our Services</h3>
+          <div class="shader"></div>
         </div>
       </a>
 
       <a href="career-volunteer.html" class="col-span-full m-col-span-5 home-link">
         <div class="home-redirect" id="cv-redirect">
           <h3 class="redirect-title">Careers & Volunteers</h3>
+          <div class="shader"></div>
         </div>
       </a>
 
       <a href="blog.html" class="col-span-full m-col-start-2 m-col-span-5 home-link">
         <div class="home-redirect" id="blog-redirect">
           <h3 class="redirect-title">Blog</h3>
+          <div class="shader"></div>
         </div>
       </a>
 
       <a href="donate.html" class="col-span-full m-col-span-5 home-link">
         <div class="home-redirect" id="donate-redirect">
           <h3 class="redirect-title">Donate</h3>
+          <div class="shader"></div>
         </div>
       </a>
     </section>
@@ -346,7 +375,7 @@
 
     <section id="bottom-menu">
       <div id="activation-button">
-        <img class="bottom-icon" src="images/icons/image-icon.svg" alt="Menu Icon">
+        <img class="bottom-icon" src="images/icons/information2.png" alt="Menu Icon">
       </div>
       
       <template id="button-template">

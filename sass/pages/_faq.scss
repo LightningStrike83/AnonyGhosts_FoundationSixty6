@@ -1,7 +1,10 @@
 @use "../abstracts/variables" as v;
 
 #faq-hero {
-    background-color: v.$sky-blue;
+    background-image: url(../images/hero-images/FQA.jpg);
+    position: relative;
+    background-size: cover;
+    background-position: 0 80%;
 }
 
 #faq-text {

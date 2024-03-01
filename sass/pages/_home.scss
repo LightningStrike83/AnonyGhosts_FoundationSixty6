@@ -1,9 +1,13 @@
 @use "../abstracts/variables" as v;
 
 #home-hero {
-    background-color: v.$sky-blue;
+    background-image: url(../images/hero-images/hp.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 90%;
     color: white;
     text-align: center;
+    position: relative;
     .hero-text {
         line-height: 40px;
     }
@@ -19,6 +23,7 @@
     p {
         color: white;
     }
+    z-index: 5;
 }
 
 #waw-text {
@@ -36,21 +41,15 @@
 #waw-image {
     margin-top: 30px;
     height: 252px;
-    background-image: url(../images/dummy.jpg);
+    background-image: url(../images/hp-2.jpg);
     background-position: center;
     background-size: cover;
-}
-
-#home-facts {
-    background-color: v.$green;
+    border-radius: 20px;
 }
 
 #fact-wrapper {
     margin: 0;
     grid-column: 2/3;
-    h3 {
-        margin-top: 40px;
-    }
 }
 
 #facts-text {
@@ -64,50 +63,59 @@
 
 #home-instructions {
     font-weight: 600;
+    display: none;
 }
 
 .fact-box, .fiction-box {
     height: 235px;
     margin-bottom: 30px;
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    margin-left: 3%;
+    margin-right: 3%;
+    h3, p {
+        color: white;
+    }
 }
 
 .fiction-title, .fact-title {
     font-weight: 600;
     font-size: 25px;
     padding-top: 30px;
-    margin-left: 3%;
     margin-bottom: 10px;
 }
 
-.fiction-text, .fact-text {
-    margin-left: 3%;
-}
 
 .ff-div {
-    background-color: v.$sky-blue;
+    height: 235px;
     border-radius: 20px;
-    .fact-box {
-        display: none;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 10px rgba($color: #000000, $alpha: 0.5);
+    .shader {
+        border-radius: 20px;
     }
 
-    &:hover {
-        .fact-box {
-            display: flex;
-        }
+    .fact-box {
+        display: flex;
+        flex-direction: column;
+    }
 
-        .fiction-box {
-            display: none;
-        }
+    .fiction-box {
+        display: none;
     }
 }
 
 #home-video {
-    background-color: v.$green;
-    height: 220px;
+    height: 50%;
 }
 
-#mental-illness-con {
-    background-color: v.$green;
+#hvc-button {
+    justify-self: center;
 }
 
 #mi-wrapper {
@@ -116,7 +124,6 @@
 }
 
 #mi-text {
-    padding-top: 40px;
     padding-bottom: 40px;
     p {
         margin-left: 5%;
@@ -130,10 +137,32 @@
     margin-bottom: 40px;
     border-radius: 20px;
     box-shadow: 0 10px 10px rgba($color: #000000, $alpha: 0.5);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
     h3 {
         padding-top: 30px;
         color: white;
+        text-shadow: 0 2px black;
     }
+
+    &:hover {
+        opacity: 75%;
+    }
+}
+
+#bp-div {
+    background-image: url(../images/drawings/bipolar.png);
+}
+
+#pd-div {
+    background-image: url(../images/drawings/psychotic-depression-plant.png);
+}
+
+#s-div {
+    background-image: url(../images/drawings/schizophrenia-plant.png);
 }
 
 .home-link, .mi-link {
@@ -151,16 +180,45 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     &:hover {
-        opacity: 50%;
+        opacity: 70%;
     }
     h3 {
         color: white;
     }
+    .shader {
+        border-radius: 20px;
+    }
+}
+
+#services-redirect {
+    background-image: url(../images/services.jpg);
+}
+
+#cv-redirect {
+    background-image: url(../images/volunteer.jpg);
+}
+
+#blog-redirect {
+    background-image: url(../images/blog.jpg);
 }
 
 #donate-redirect {
+    background-image: url(../images/donate.jpg);
     margin-bottom: 0;
+}
+
+.redirect-title {
+    z-index: 5;
+}
+
+.fact-text {
+    margin-right: 3%;
 }
 
 @media screen and (min-width: 768px) {
@@ -177,6 +235,9 @@
 
     #waw-text {
         justify-content: center;
+        p {
+            text-align: left;
+        }
     }
 
     #waw-image {
@@ -198,7 +259,7 @@
     .ff-div {
         width: 30%;
         max-width: 100%;
-        height: 180px;
+        height: 250px;
         margin-bottom: 40px;
     }
 
@@ -209,14 +270,24 @@
     .fiction-title, .fact-title {
         font-size: 12px;
         margin-left: 5%;
+        padding-top: 20px;
     }
     
     .fiction-text, .fact-text {
         margin-left: 5%;
+        margin-right: 5%;
     }
 
-    #home-video {
-        height: 350px;
+    #home-video-con {
+        h3 {
+            margin-bottom: 30px;
+        }
+    }
+
+    #home-video-title {
+        h3 {
+            text-align: center;
+        }
     }
 
     #mi-text {
@@ -235,9 +306,14 @@
 
     .mental-health-info {
         height: 200px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-end;
+        justify-content: center;
         h3 {
             text-align: center;
             font-size: 15px;
+            padding-top: 0;
         }
     }
 
@@ -250,6 +326,10 @@
 }
 
 @media screen and (min-width: 1200px) {
+    #home-instructions {
+        display: block;
+    }
+
     #home-hero {
         .hero-text {
             padding-bottom: 15px;
@@ -266,20 +346,37 @@
     }
 
     .ff-div {
-        height: 300px;
-        margin-bottom: 100px;
+        height: 350px;
+        margin-bottom: 50px;
+        .fact-box {
+            display: none;
+            margin-left: 0;
+        }
+
+        .fiction-box {
+            display: flex;
+            flex-direction: column;
+            margin-left: 0;
+        }
+    
+        &:hover {
+            .fact-box {
+                display: flex;
+                flex-direction: column;
+            }
+    
+            .fiction-box {
+                display: none;
+            }
+        }
     }
 
     .fiction-title, .fact-title {
         font-size: 25px;
     }
 
-    #home-video {
-        height: 500px;
-    }
-
     .mental-health-info {
-        height: 310px;
+        height: 400px;
         h3 {
             font-size: 25px;
         }
@@ -309,10 +406,6 @@
 
     .fiction-title, .fact-title {
         font-size: 30px;
-    }
-
-    #home-video {
-        height: 800px;
     }
 
     .mental-health-info {
