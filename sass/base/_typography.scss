@@ -8,6 +8,10 @@ a, p, label {
     font-size: 12px;
 }
 
+a, p, h3 {
+    transition: all ease-in-out 0.5s;
+}
+
 h3 {
     font-family: 'Metropolis-Semibold', 'Montserrat Alternates', Arial, sans-serif;
     text-align: center;
