@@ -1,10 +1,11 @@
-import { bottomMenu } from "./bottom.js";
-import { donateVideo } from "./donate.js";
-import { factsInfo } from "./facts.js";
-import { FAQ } from "./faq.js";
-import { hamburger } from "./hamburger.js";
-import { clickMenu } from "./menu.js";
-import { services } from "./services.js";
+import { bottomMenu } from "./modules/bottom.js";
+import { donateVideo } from "./modules/donate.js";
+import { factsInfo } from "./modules/facts.js";
+import { FAQ } from "./modules/faq.js";
+import { hamburger } from "./modules/hamburger.js";
+import { clickMenu } from "./modules/menu.js";
+import { services } from "./modules/services.js";
+import { video } from "./modules/video.js";
 
 if (document.body.dataset.page === 'faq') {
     FAQ();
@@ -16,10 +17,12 @@ if (document.body.dataset.page === 'services') {
 
 if (document.body.dataset.page === 'home') {
     factsInfo();
+    video()
 }
 
 if (document.body.dataset.page === 'donate') {
     donateVideo();
+    video()
 }
 
 hamburger();
