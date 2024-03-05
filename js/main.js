@@ -25,6 +25,10 @@ if (document.body.dataset.page === 'donate') {
     video()
 }
 
+if (document.body.dataset.page === 'about') {
+    video()
+}
+
 hamburger();
 bottomMenu();
 clickMenu();

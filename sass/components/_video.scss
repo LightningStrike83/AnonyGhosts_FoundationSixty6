@@ -1,12 +1,19 @@
 @use "../abstracts/variables" as v;
 
+video {
+    max-width: 100%;
+}
+
 #video-logo {
     margin-left: 5%;
     max-width: 100px;
 }
 
-#home-video, #donate-video-con {
+.video-con {
     position: relative;
+}
+
+#home-video, #donate-video-con, #about-video-con {
     display: flex;
     flex-direction: column;
 }
@@ -38,7 +45,7 @@
 }
 
 .fa, .fa-solid, .fa-regular {
-    font-size: 20px;
+    font-size: 10px;
     margin-left: 5%;
     color: white;
 }
@@ -54,4 +61,10 @@
 #full-screen {
     margin-left: auto;
     margin-right: 5%;
+}
+
+@media screen and (min-width: 768px) {
+    .fa, .fa-solid, .fa-regular {
+        font-size: 20px;
+    }
 }
