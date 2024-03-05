@@ -73,6 +73,8 @@ export function services() {
             serviceDiv.setAttribute("class", "col-span-full m-col-span-5 service-area")
             serviceDiv.setAttribute("id", `service-div-${i++}`)
             a.setAttribute("class", "custom-button")
+            p.setAttribute("class", "dmt")
+            h3.setAttribute("class", "dmt")
 
             h3.textContent = service.title
             img.src = service.icon
