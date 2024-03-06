@@ -50,6 +50,14 @@ video {
     color: white;
 }
 
+i {
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+    &:hover {
+        opacity: 60%;
+    }
+}
+
 #change-volume {
     accent-color: v.$green;
 }
