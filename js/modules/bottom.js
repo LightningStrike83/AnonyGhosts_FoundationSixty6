@@ -56,9 +56,10 @@ export function bottomMenu() {
                 let phoneButton = document.querySelector("#emergency-phone img")
 
                 function darkMode() {
-                    console.log(document.body.style.backgroundColor)
+                    let bodyStyle = window.getComputedStyle(document.body);
+                    let bodyBackground = bodyStyle.backgroundColor
                     //Note to Professor De Luca; this is still a WIP
-                    if (document.body.style.backgroundColor === "#ffffff") {
+                    if (bodyBackground === "rgb(255, 255, 255)") {
                         let darkModeText = document.querySelectorAll(".dmt")
                         let header = document.querySelector("header")
                         let navLinks = document.querySelectorAll("#nav-menu p a")
@@ -77,12 +78,20 @@ export function bottomMenu() {
                         })
 
 
-                    } else if (document.body.style.backgroundColor === "#222222") {
+                    } else if (bodyBackground === "rgb(34, 34, 34)") {
                         let darkModeText = document.querySelectorAll(".dmt")
                         let header = document.querySelector("header")
+                        let navLinks = document.querySelectorAll("#nav-menu p a")
+                        let explore = document.querySelector("#explore")
 
                         document.body.style.backgroundColor = "#ffffff"
                         header.style.backgroundColor = "#ffffff"
+                        header.style.backgroundColor = "#ffffff"
+                        explore.style.color = "#222222"
+
+                        navLinks.forEach(link => {
+                            link.style.color = "#222222"
+                        })
 
                         darkModeText.forEach(dmt => {
                             dmt.style.color = "#000000"

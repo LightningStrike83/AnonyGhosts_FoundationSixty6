@@ -110,11 +110,8 @@
     }
 }
 
-#home-video {
-    height: 50%;
-}
-
 #hvc-button {
+    margin-top: 30px;
     justify-self: center;
 }
 
@@ -276,6 +273,10 @@
     .fiction-text, .fact-text {
         margin-left: 5%;
         margin-right: 5%;
+    }
+
+    #hvc-button {
+        margin-top: 50px;
     }
 
     #home-video-con {
