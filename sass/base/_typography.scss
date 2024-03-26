@@ -40,6 +40,8 @@ label {
     font-size: 26px;
     font-family: 'Metropolis-Semibold', 'Montserrat Alternates', Arial, sans-serif;
     z-index: 5;
+    background-color: v.$hero-green;
+    padding: 20px;
 }
 
 .donate-text, .send-button {
@@ -114,6 +116,7 @@ label {
 @media screen and (min-width: 768px) {
     .hero-text {
         font-size: 40px;
+        padding: 30px;
     }
 
     h3 {
@@ -153,6 +156,7 @@ label {
 
     .hero-text {
         font-size: 60px;
+        padding: 40px;
     }
 
     h3 {
