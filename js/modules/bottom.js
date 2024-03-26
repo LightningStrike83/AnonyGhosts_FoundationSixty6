@@ -33,9 +33,8 @@ export function bottomMenu() {
         }
     ]
 
-    if (currentTheme === "dark") {
+    if (currentTheme && currentTheme === "dark") {
         darkMode()
-        console.log("hi")
     }
     
     if (document.body.classList.contains("dark-theme")) {
@@ -88,6 +87,7 @@ export function bottomMenu() {
         let bodyBackground = bodyStyle.backgroundColor
         //Note to Professor De Luca; this is still a WIP
         if (bodyBackground === "rgb(255, 255, 255)") {
+            localStorage.setItem("theme", "dark");
             let darkModeText = document.querySelectorAll(".dmt")
             let header = document.querySelector("header")
             let navLinks = document.querySelectorAll("#nav-menu p a")
@@ -112,6 +112,7 @@ export function bottomMenu() {
             let navLinks = document.querySelectorAll("#nav-menu p a")
             let explore = document.querySelector("#explore")
 
+            localStorage.setItem("theme", "light");
             document.body.style.backgroundColor = "#ffffff"
             header.style.backgroundColor = "#ffffff"
             header.style.backgroundColor = "#ffffff"
@@ -167,7 +168,5 @@ export function bottomMenu() {
     localStorage.setItem("theme", theme)
 
     console.log(currentTheme)
-
-    //For storage: Lines 5, 7, 36-42, 164
 }
     
