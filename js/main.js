@@ -3,6 +3,7 @@ import { donateVideo } from "./modules/donate.js";
 import { factsInfo } from "./modules/facts.js";
 import { FAQ } from "./modules/faq.js";
 import { hamburger } from "./modules/hamburger.js";
+import { heroHeader } from "./modules/hero.js";
 import { clickMenu } from "./modules/menu.js";
 import { services } from "./modules/services.js";
 import { video } from "./modules/video.js";
@@ -18,6 +19,7 @@ if (document.body.dataset.page === 'services') {
 if (document.body.dataset.page === 'home') {
     factsInfo();
     video()
+    heroHeader()
 }
 
 if (document.body.dataset.page === 'donate') {
