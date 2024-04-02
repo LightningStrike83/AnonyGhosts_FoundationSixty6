@@ -44,6 +44,10 @@ label {
     padding: 20px;
 }
 
+.hero-text:not(#home-hero-text) {
+    border-radius: 50px;
+}
+
 .donate-text, .send-button {
     font-size: 15px;
     font-family: 'Lexend', 'Montserrat', Arial, sans-serif;

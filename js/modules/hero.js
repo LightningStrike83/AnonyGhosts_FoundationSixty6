@@ -5,7 +5,7 @@ export function heroHeader() {
     const heroLink = document.querySelector("#home-hero-link")
     let i = 0
 
-    const interval = setInterval(changehero, 5000)
+    const interval = setInterval(changehero, 7000)
 
     let heroinfo = [
         {
