@@ -18,33 +18,17 @@ export function services() {
         },
 
         {
-            title: "Resource and Referral",
-            icon: "images/idea.svg",
-            desc: "Provide information on mental health resources, treatment options, and referrals to other relevant services in the community.",
+            title: "Referrals and Connections",
+            icon: "images/chat.svg",
+            desc: "We can connect you to someone who can help support you or your family through our network of supports.",
             link: "Contact Us",
             linkpath: "contact.html",
         },
 
         {
-            title: "Education Programs",
-            icon: "images/teach.svg",
-            desc: "Conduct workshops, seminars, and awareness campaigns to educate the public, schools, and workplaces about mental health issues, reducing stigma, and promoting mental well-being.",
-            link: "Learn More",
-            linkpath: "events.html",
-        },
-
-        {
-            title: "Employment & Vocational Support",
-            icon: "images/employ.svg",
-            desc: "Offer programs that help individuals with mental health challenges find and maintain employment, providing vocational training and support.",
-            link: "Learn More",
-            linkpath: "career-volunteer.html",
-        },
-
-        {
-            title: "Helpline Services",
-            icon: "images/chat.svg",
-            desc: "Offer a confidential 24/7 phone, text, or online support service for immediate assistance, crisis intervention, and emotional support.",
+            title: "Resources",
+            icon: "images/idea.svg",
+            desc: "We can provide resources to help your family's struggle and help educate on the struggles of mental health and what you can do to help support someone who's struggling.",
             link: "Learn More",
             linkpath: "contact.html",
         },
@@ -55,6 +39,22 @@ export function services() {
             desc: "Establish residential facilities or community-based programs that offer a supportive environment for individuals with severe mental health conditions.",
             link: "Learn More",
             linkpath: "events.html",
+        },
+
+        {
+            title: "Education Programs",
+            icon: "images/teach.svg",
+            desc: "Conduct workshops, seminars, and awareness campaigns to educate the public, schools, and workplaces about mental health issues, reducing stigma, and promoting mental well-being.",
+            link: "Learn More",
+            linkpath: "career-volunteer.html",
+        },
+
+        {
+            title: "Employment & Vocational Support",
+            icon: "images/employ.svg",
+            desc: "Offer programs that help individuals with mental health challenges find and maintain employment, providing vocational training and support.",
+            link: "Learn More",
+            linkpath: "career-volunteer.html",
         },
     ]
 

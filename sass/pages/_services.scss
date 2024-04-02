@@ -40,19 +40,18 @@
 
 .service-begin {
     display: flex;
+    flex-direction: column-reverse;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     h3 {
         margin-top: 15px;
         font-size: 15px;
-        margin-left: 5%;
         text-align: center;
     }
     img {
         margin-top: 15px;
         height: 60px;
-        margin-right: 5%;
     }
 }
 
@@ -87,13 +86,16 @@
     
     .service-begin {
         justify-content: space-between;
+        flex-direction: row;
         h3 {
             margin-top: 15px;
             margin-left: 5%;
+            margin-right: 5%;
             text-align: left;
         }
         img {
             margin-left: 5%;
+            margin-right: 5%;
         }
     }
 }
