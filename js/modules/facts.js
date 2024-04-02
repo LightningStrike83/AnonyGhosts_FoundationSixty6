@@ -25,6 +25,7 @@ export function factsInfo() {
     ]
 
     function cardPlacement() {
+        let i = 0
         facts.forEach(fact => {
             let fictiondiv = document.createElement("div")
             let factdiv = document.createElement("div")
@@ -35,8 +36,10 @@ export function factsInfo() {
             let textdiv = document.createElement("div")
             let shadowdiv = document.createElement("div")
 
-            fictiondiv.setAttribute("class", "fiction-box")
-            factdiv.setAttribute("class", "fact-box")
+            fictiondiv.setAttribute("class", `fiction-box fiction-box-${i}`)
+            factdiv.setAttribute("class", `fact-box fact-box-${i}`)
+            fictiondiv.style.display = "flex"
+            factdiv.style.display = "none"
             facttitle.setAttribute("class", "fact-title")
             facttext.setAttribute("class", "fact-text")
             fictiontitle.setAttribute("class", "fiction-title")
@@ -51,6 +54,8 @@ export function factsInfo() {
             facttitle.textContent = "Fact:"
             fictiontitle.textContent = "Fiction:"
 
+            textdiv.dataset.member = i
+
             fictiondiv.appendChild(fictiontitle)
             fictiondiv.appendChild(fictiontext)
             factdiv.appendChild(facttitle)
@@ -60,8 +65,48 @@ export function factsInfo() {
             textdiv.appendChild(factdiv)
             textdiv.appendChild(shadowdiv)
             factsArea.appendChild(textdiv)
+
+            const ffDiv = document.querySelectorAll(".ff-div")
+            ffDiv.forEach(div => div.addEventListener("click", changeText))
+            ffDiv.forEach(div => div.addEventListener("mouseenter", displayFact))
+            ffDiv.forEach(div => div.addEventListener("mouseleave", displayFiction))
+
+            i++
         })
     }
 
     cardPlacement();
+
+    function changeText() {
+        const dataMember = this.dataset.member
+        const fictionBox = document.querySelector(`.fiction-box-${dataMember}`)
+        const factBox = document.querySelector(`.fact-box-${dataMember}`)
+
+        if (fictionBox.style.display === "flex") {
+            fictionBox.style.display = "none"
+            factBox.style.display = "flex"  
+            
+        } else if (fictionBox.style.display === "none") {
+            fictionBox.style.display = "flex"
+            factBox.style.display = "none"
+        }
+    }
+
+    function displayFiction() {
+        const dataMember = this.dataset.member
+        const fictionBox = document.querySelector(`.fiction-box-${dataMember}`)
+        const factBox = document.querySelector(`.fact-box-${dataMember}`)
+
+        fictionBox.style.display = "flex"
+        factBox.style.display = "none"
+    }
+
+    function displayFact() {
+        const dataMember = this.dataset.member
+        const fictionBox = document.querySelector(`.fiction-box-${dataMember}`)
+        const factBox = document.querySelector(`.fact-box-${dataMember}`)
+
+        fictionBox.style.display = "none"
+        factBox.style.display = "flex"
+    }
 }

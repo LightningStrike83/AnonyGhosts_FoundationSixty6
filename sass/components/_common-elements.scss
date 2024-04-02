@@ -7,6 +7,13 @@ body {
     transition: all ease-in-out 0.5s;
 }
 
+.full-width-grid-con {
+    .grid-con {
+        margin: 0;
+        grid-column: 2/3;
+    }
+}
+
 .line-break {
     border-bottom: 1px solid black;
 }

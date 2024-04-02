@@ -1,7 +1,6 @@
 @use "../abstracts/variables" as v;
 
 #home-hero {
-    background-image: url(../images/hero-images/hp.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 90%;
@@ -15,6 +14,10 @@
     .hero-image {
         align-content: flex-end;
     }
+}
+
+#home-hero-link {
+    text-decoration: none;
 }
 
 #home-con {
@@ -94,6 +97,10 @@
     margin-bottom: 10px;
 }
 
+.fiction-text, .fact-text {
+    font-size: 18px;
+}
+
 
 .ff-div {
     height: 235px;
@@ -109,12 +116,13 @@
     }
 
     .fact-box {
-        display: flex;
+        display: none;
         flex-direction: column;
     }
 
     .fiction-box {
-        display: none;
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -123,13 +131,19 @@
     justify-self: center;
 }
 
+#mental-illness-con {
+    background-color: v.$bg-green;
+}
+
 #mi-wrapper {
     margin: 0;
     grid-column: 2/3;
 }
 
 #mi-text {
+    padding-top: 40px;
     padding-bottom: 40px;
+    text-align: center;
     p {
         margin-left: 5%;
         margin-right: 5%;
@@ -138,6 +152,9 @@
 
 .mental-health-info {
     height: 290px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
     background-color: v.$sky-blue;
     margin-bottom: 40px;
     border-radius: 20px;
@@ -226,6 +243,12 @@
     margin-right: 3%;
 }
 
+#home-video-con {
+    background-color: v.$bg-green;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 @media screen and (min-width: 768px) {
     .home-hero-supplementary-text {
         font-size: 15px;
@@ -267,7 +290,7 @@
     }
 
     .fiction-title, .fact-title {
-        font-size: 12px;
+        font-size: 18px;
         margin-left: 5%;
         padding-top: 20px;
     }
@@ -275,6 +298,7 @@
     .fiction-text, .fact-text {
         margin-left: 5%;
         margin-right: 5%;
+        font-size: 12px;
     }
 
     #hvc-button {
@@ -282,6 +306,8 @@
     }
 
     #home-video-con {
+        padding-top: 30px;
+        padding-bottom: 30px;
         h3 {
             margin-bottom: 30px;
         }
@@ -309,7 +335,6 @@
 
     .mental-health-info {
         height: 200px;
-        display: flex;
         flex-wrap: wrap;
         align-content: flex-end;
         justify-content: center;
@@ -351,7 +376,6 @@
 
     .ff-div {
         height: 350px;
-        margin-bottom: 50px;
         .fact-box {
             display: none;
             margin-left: 0;
@@ -362,21 +386,14 @@
             flex-direction: column;
             margin-left: 0;
         }
-    
-        &:hover {
-            .fact-box {
-                display: flex;
-                flex-direction: column;
-            }
-    
-            .fiction-box {
-                display: none;
-            }
-        }
     }
 
     .fiction-title, .fact-title {
         font-size: 25px;
+    }
+
+    .fact-text, .fiction-text {
+        font-size: 20px;
     }
 
     .mental-health-info {
@@ -384,6 +401,11 @@
         h3 {
             font-size: 25px;
         }
+    }
+
+    .home-video-con {
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
 }
 

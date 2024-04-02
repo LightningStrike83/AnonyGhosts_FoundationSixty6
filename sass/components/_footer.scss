@@ -9,19 +9,25 @@ footer {
     }
 }
 
-#footer-logo, #footer-links, #footer-newsletter {
+#footer-logo-con, #footer-links, #footer-newsletter {
     text-align: center;
     align-self: center;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-#footer-logo {
+#footer-logo-con {
     margin-top: 40px;
     margin-bottom: 50px;
-    svg {
-        max-height: 50px;
+    border-radius: 50px;
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    img {
         transition: all ease-in-out 0.5s;
+        max-width: 90%;
         &:hover {
             opacity: 70%;
         }
@@ -165,6 +171,12 @@ footer {
     #sm-newsletter {
         #newsletter-title {
             font-size: 15px;
+        }
+    }
+
+    #footer-logo-con {
+        img {
+            max-width: 80%;
         }
     }
 }
