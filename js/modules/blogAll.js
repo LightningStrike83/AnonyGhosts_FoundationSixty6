@@ -4,7 +4,6 @@ export function blogCreationAll() {
             fetch('http://localhost/AnonyGhosts_FoundationSixty6/lumen/public/blog_posts')
             .then(response => response.json())
             .then(blog => {
-                console.log(blog)
                 this.blogPost = blog;
             })
             .catch(error => {
