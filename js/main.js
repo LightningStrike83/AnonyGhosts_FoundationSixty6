@@ -4,6 +4,7 @@ import { blogCreationRecent } from "./modules/blog-recent.js";
 import { blogCreationAll } from "./modules/blogAll.js";
 import { bottomMenu } from "./modules/bottom.js";
 import { donateVideo } from "./modules/donate.js";
+import { eventInfo } from "./modules/events.js";
 import { factsInfo } from "./modules/facts.js";
 import { FAQ } from "./modules/faq.js";
 import { hamburger } from "./modules/hamburger.js";
@@ -30,6 +31,10 @@ if (document.body.dataset.page === 'blog-archive') {
 
 if (document.body.dataset.page === 'blog-single') {
     blogOne()
+}
+
+if (document.body.dataset.page === 'events') {
+    eventInfo()
 }
 
 if (document.body.dataset.page === 'services') {

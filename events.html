@@ -20,6 +20,7 @@
     <meta name="theme-color" content="#ffffff">
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script defer src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <script type="module" defer src="js/main.js"></script>
 </head>
 <body data-page="events">
@@ -163,73 +164,25 @@
             <p id="presents-title">FOUNDATION SIXTY6 Presents</p>
             <h3>Week Sixty6</h3>
             <p>Participate in the biggest week-long event to support mental health. Join us in our seven-day long event, with different activities each day!</p>
-            <a class="custom-button" href="">Join Now</a>
+            <a class="custom-button" href="#">Join Now</a>
         </div>
 
         <div class="shader"></div>
     </section>
 
     <section id="event-info-con">
-        <div class="event-info grid-con">
-            <h3 class="event-date col-span-full m-col-start-2 m-col-end-4">May 1st, 2024</h3>
-            <div id="event-1" class="event-image col-span-full m-col-span-3"></div>
+        <div v-for="event in eventList" class="event-info grid-con">
+            <h3 class="event-date col-span-full m-col-start-2 m-col-end-4">{{event.date}}</h3>
+            <div class="event-image col-span-full m-col-span-3" :style="{ backgroundImage: 'url(images/' + event.image_filename + ')' }">
+            </div>
             <div class="event-text col-span-full m-col-span-5">
-                <h3 class="dmt">THANK YOU FANSHAWE DINNER</h3>
-                <p class="event-location dmt">7:00pm at RBC Place</p>
-                <p class="dmt">A thank you dinner for the Fanshawe students for their diligent work in kickstarting our foundation!</p>
+                <h3 class="dmt">{{event.title}}</h3>
+                <p class="event-location dmt">{{event.time}} at {{event.place}}</p>
+                <p class="dmt">{{event.description}}</p>
                 <a class="event-button custom-button dmt" href="career-volunteer.html">Volunteer</a>
             </div>
-        </div>
-
-        <div class="grid-con">
-          <div class="col-span-full divider"></div>
-        </div>
-
-        <div class="event-info grid-con">
-            <h3 class="event-date col-span-full m-col-start-2 m-col-end-4">April 18th, 2024</h3>
-            <div id="event-2" class="event-image col-span-full m-col-span-3"></div>
-            <div class="event-text col-span-full m-col-span-5">
-                <h3 class="dmt">IDP INDUSTRY NIGHT</h3>
-                <p class="event-location dmt">1:00pm at Centennial Hall</p>
-                <p class="dmt">We will be attending Fanshawe College's Industry Night to select the group of students whose design we will use.</p>
-                <a class="event-button custom-button dmt" href="career-volunteer.html">Volunteer</a>
-            </div>
-        </div>
-
-        <div class="grid-con">
-          <div class="col-span-full divider"></div>
-        </div>
-
-        <div class="event-info grid-con">
-            <h3 class="event-date col-span-full m-col-start-2 m-col-end-4">April 5th, 2024</h3>
-            <div id="event-3" class="event-image col-span-full m-col-span-3"></div>
-            <div class="event-text col-span-full m-col-span-5">
-                <h3 class="dmt">IDP Presentations</h3>
-                <p class="event-location dmt">12:00pm at Fanshawe College Downtown Campus</p>
-                <p class="dmt">Fanshawe College's IDP program will be presenting their final ideas and marketing pitches to us, as well as other Industry professionals.</p>
-                <a class="event-button custom-button dmt" href="career-volunteer.html">Volunteer</a>
-            </div>
-        </div>
+          </div>
     </section>
-
-    <!--MJ, here's a blank template of the event information
-        <div class="event-info grid-con">
-            <h3 class="event-date col-span-full m-col-start-2 m-col-end-4"></h3>
-            <div class="event-image col-span-full m-col-span-3"></div>
-            <div class="event-text col-span-full m-col-span-5">
-                <h3></h3>
-                <p class="event-time"></p>
-                <p></p>
-                <a class="event-button custom-button" href="career-volunteer.html">Volunteer</a>
-            </div>
-        </div>-->
-
-    <!-- <section id="event-donate" class="grid-con">
-        <div id="event-donate-text" class="col-span-full">
-            <h3>BE THE BUILDING BLOCKS FOR THE FUTURE</h3>
-            <a class="custom-button" href="donate.html">Donate</a>            
-        </div>
-    </section> -->
 
     <footer class="full-width-grid-con">
       <div class="grid-con">
@@ -239,12 +192,14 @@
 
         <div id="footer-links" class="col-span-full m-col-span-4">
           <ul>
+            <li><a href="get-services.html">Services</a></li>
             <li><a href="contact.html">Contact Us</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="faq.html">FAQ</a></li>
             <li><a href="career-volunteer.html">Volunteer</a></li>
+            <li><a href="events.html">Events</a></li>
             <li><a href="blog.html">Blog</a></li>
-            <li><a href="events.html">Donate</a></li>
+            <li><a href="donate.html">Donate</a></li>
           </ul>
         </div>
 

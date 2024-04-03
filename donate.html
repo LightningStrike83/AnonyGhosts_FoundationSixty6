@@ -180,14 +180,11 @@
         </div>
     </section>
 
-    <div class="grid-con">
-      <div class="col-span-full divider"></div>
-    </div>
-
-    <section id="donate-video" class="grid-con">
+    <section id="wide-vid" class="full-width-grid-con">
+      <div id="donate-video" class="grid-con">
         <div id="video-text" class="col-span-full m-col-start-2 m-col-end-12">
-            <h3 class="dmt">Video Testimonials</h3>
-            <p class="dmt">Select an image to load a video and hear why it's important to donate and support the advancement of mental health!</p>
+          <h3 class="dmt">Video Testimonials</h3>
+          <p class="dmt">Select an image to load a video and hear why it's important to donate and support the advancement of mental health!</p>
         </div>
 
         <a href="#donate-video-con" class="col-span-2 m-col-start-2 m-col-span-5">
@@ -200,7 +197,7 @@
         <a href="#donate-video-con" class="col-span-2 m-col-span-5">
           <div>
             <div id="youth-video" class="video-image"></div>
-            <p class="dmt">A Youth's Wish</p>
+            <p class="dmt">A Youth's Story</p>
           </div>
         </a>
 
@@ -211,28 +208,35 @@
           </video>
 
           <div class="video-controls hidden">
-            <img id="video-logo" src="images/footer-logo.svg" alt="Video Logo">
-  
+            <div id="video-logo-con">
+              <img id="video-logo" src="images/logo.svg" alt="Video Logo">
+            </div>
+
             <button id="play-button">
               <i class="fa-solid fa-play"></i>
             </button>
-  
+
             <button id="pause-button">
                 <i class="fa-solid fa-pause"></i>
             </button>
-  
+
             <button id="stop-button">
                 <i class="fa-solid fa-stop"></i>
             </button>
-  
+
             <i class="fa fa-volume-up"></i>
             <input type="range" id="change-volume" step="0.05" min="0" max="1" value="1">
-  
+
             <button id="full-screen">
                 <i class="fa-solid fa-compress"></i>
             </button>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="statistics-con" class="grid-con">
+      <h3 class="col-span-full">Statistics and Facts</h3>
     </section>
 
     <div class="grid-con">
@@ -244,7 +248,7 @@
         <p>Any contributor who donates $75 or more will receive a special, hand-made tie-dye t-shirt made by some of the members of Foundation Sixty6.</p>
       </div>
 
-      <div class="shader"></div>
+      <div class="blue-shader"></div>
     </section>
 
     <div class="grid-con">
@@ -279,12 +283,14 @@
 
         <div id="footer-links" class="col-span-full m-col-span-4">
           <ul>
+            <li><a href="get-services.html">Services</a></li>
             <li><a href="contact.html">Contact Us</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="faq.html">FAQ</a></li>
             <li><a href="career-volunteer.html">Volunteer</a></li>
+            <li><a href="events.html">Events</a></li>
             <li><a href="blog.html">Blog</a></li>
-            <li><a href="events.html">Donate</a></li>
+            <li><a href="donate.html">Donate</a></li>
           </ul>
         </div>
 

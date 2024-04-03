@@ -8,6 +8,10 @@
     background-position: 0 40%;
 }
 
+.event-button {
+    margin-bottom: 20px;
+}
+
 #week-sixtysix {
     position: relative;
     background-image: url(../images/victoria-park.jpg);
@@ -57,6 +61,9 @@
     &:last-of-type {
         margin-bottom: 0;
     }
+    &:not(:last-of-type) {
+        border-bottom: 2px solid v.$green;
+    }
 }
 
 .event-date {
@@ -79,21 +86,6 @@
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-#event-1 {
-    background-image: url(../images/clinking-glasses.jpeg);
-    background-position: 65% 50%;
-}
-
-#event-2 {
-    background-image: url(../images/night.jpg);
-    background-position: 25%;
-}
-
-#event-3 {
-    background-image: url(../images/presentation.jpg);
-    background-position: 65%;
 }
 
 .event-text {
@@ -150,6 +142,10 @@
         padding-bottom: 20px;
         font-size: 20px;
         height: 80px;
+    }
+
+    .event-button {
+        margin-bottom: 0;
     }
 
     .event-text {
