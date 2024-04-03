@@ -58,6 +58,7 @@ export function adminScripts() {
         fetch(`${baseURL}blog_posts`)
         .then(result => result.json())
         .then(function(result){
+            console.log(result)
             result.forEach(result => {
                 let div = document.createElement("div")
                 let id = document.createElement("p")
@@ -65,6 +66,7 @@ export function adminScripts() {
                 let author = document.createElement("p")
                 let date = document.createElement("p")
                 let description = document.createElement("p")
+                let text = document.createElement("p")
                 let actionDiv = document.createElement("div")
                 let editLink = document.createElement("a")
                 let deleteLink = document.createElement("a")
@@ -81,16 +83,18 @@ export function adminScripts() {
                 title.textContent = `Title: ${result.title}`
                 author.textContent = `Author: ${result.author}`
                 date.textContent = `Date: ${result.date}`
-                description.textContent = `Description: ${result.text}`
+                description.textContent = `Description: ${result.description}`
+                text.textContent = `Description: ${result.text}`
 
                 actionDiv.appendChild(editLink)
                 actionDiv.appendChild(deleteLink)
 
                 div.appendChild(id)
                 div.appendChild(title)
+                div.appendChild(description)
                 div.appendChild(author)
                 div.appendChild(date)
-                div.appendChild(description)
+                div.appendChild(text)
                 div.appendChild(actionDiv)
                 blogDiv.appendChild(div)
             })

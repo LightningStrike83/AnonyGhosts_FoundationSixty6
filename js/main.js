@@ -1,4 +1,5 @@
 import { adminScripts } from "./modules/admin.js";
+import { blogCreation } from "./modules/blog.js";
 import { bottomMenu } from "./modules/bottom.js";
 import { donateVideo } from "./modules/donate.js";
 import { factsInfo } from "./modules/facts.js";
@@ -15,6 +16,10 @@ if (document.body.dataset.page === 'faq') {
 
 if (document.body.dataset.page === 'admin') {
     adminScripts()
+}
+
+if (document.body.dataset.page === 'blog') {
+    blogCreation()
 }
 
 if (document.body.dataset.page === 'services') {
