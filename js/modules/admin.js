@@ -83,7 +83,7 @@ export function adminScripts() {
                 title.textContent = `Title: ${result.title}`
                 author.textContent = `Author: ${result.author}`
                 date.textContent = `Date: ${result.date}`
-                description.textContent = `Description: ${result.description}`
+                description.textContent = `Text: ${result.description}`
                 text.textContent = `Description: ${result.text}`
 
                 actionDiv.appendChild(editLink)
