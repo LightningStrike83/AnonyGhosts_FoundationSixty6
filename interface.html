@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog- Foundation Sixty6</title>
+    <title>Home- Foundation Sixty6</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/main.css">
@@ -20,11 +20,11 @@
     <meta name="theme-color" content="#ffffff">
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
-    <script defer src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script defer src="https://kit.fontawesome.com/a7c4f622e4.js" crossorigin="anonymous"></script>
     <script type="module" defer src="js/main.js"></script>
 </head>
-<body data-page="blog">
-    <h1 class="hidden">Foundation Sixty6 Blog Page</h1>
+<body data-page="admin">
+    <h1 class="hidden">Foundation Sixty6 Home Page</h1>
 
     <header class="full-width-grid-con">
       <div id="header-con" class="grid-con">
@@ -145,71 +145,166 @@
           </div>
         </a>
     </header>
-    
-    <section id="blog-hero" class="full-width-grid-con">
-        <div class="col-span-full hero-image">
-            <p class="hero-text">BLOG</p>
-        </div>
+
+    <section id="event-list-con" class="admin-list grid-con">
+      <div class="see-more col-span-full">
+        <h3>Event List</h3>
+        <p data-member="1">See All ▼</p>
+      </div>
+
+      <div id="event-list" class="col-span-2 m-col-span-6 admin-info-1"></div>
+
+      <div id="event-form" class="col-span-2 m-col-span-6 admin-info-1">
+        <h3 class="admin-h3">Add A New Event</h3>
+        <form method="POST" enctype="multipart/form-data">
+          <label for="title">Event Title:</label><br>
+          <input name="title" type="text" required><br><br>
+          <label for="date">Event Date:</label><br>
+          <input name="date" type="text" required><br><br>
+          <label for="place">Event Location:</label><br>
+          <input name="place" type="text" required><br><br>
+          <label for="time">Event Time:</label><br>
+          <input name="time" type="text" required><br><br>
+          <label for="description">Event Description:</label><br>
+          <textarea name="description" required></textarea><br><br>
+          <input name="image_filename" type="file" required><br>
+          <input name="submit" type="submit" value="Add">
+        </form>
+      </div>
     </section>
 
-    <section id="recent-posts" class="grid-con">
-        <div id="blog-recent-title" class="col-span-full">
-            <h3 class="dmt">Recent Blog Posts</h3>
-        </div>
+    <section id="blog-list-con" class="admin-list grid-con">
+      <div class="see-more col-span-full">
+        <h3>Blog List</h3>
+        <p data-member="2">See All ▼</p>
+      </div>
 
-        <div v-for="blog in blogPost" class="blog-post col-span-2 m-col-span-4">
-            <a :href="'blog-post.html?id='+ blog.id">
-                <div class="blog-pic" :style="{ backgroundImage: 'url(' + blog.image_filename + ')' }"></div>
-                <h3 class="blog-title dmt">{{blog.title}}</h3>
-                <p class="blog-desc dmt">{{blog.description}}</p>
-                <div class="details-div">
-                    <p class="author-name dmt">{{blog.author}}</p>
-                    <p class="date dmt">{{blog.date}}</p>
-                </div>
-            </a>
-        </div>
+      <div id="blog-list" class="col-span-2 m-col-span-6 admin-info-2"></div>
 
-        <div id="more-blogs" class="col-span-full">
-            <a class="custom-button" href="blog-archive.html">More</a>
-        </div>
+      <div id="blog-form" class="col-span-2 m-col-span-6 admin-info-2">
+        <h3 class="admin-h3">Add A New Blog Entry</h3>
+        <form method="POST" enctype="multipart/form-data">
+          <label for="title">Blog Title:</label><br>
+          <input name="title" type="text" required><br><br>
+          <label for="author">Blog Author:</label><br>
+          <input name="author" type="number" min="1" required><br><br>
+          <label for="date">Blog Date:</label><br>
+          <input name="date" type="date" required><br><br>
+          <label for="text">Blog Text:</label><br>
+          <textarea name="text" required></textarea><br>
+          <input name="image_filename" type="file" required><br>
+          <input name="submit" type="submit" value="Add">
+        </form>
+      </div>
+    </section>
+
+    <section id="volunteer-list-con" class="admin-list grid-con">
+      <div class="see-more col-span-full">
+        <h3>Volunteer List</h3>
+        <p data-member="3">See All ▼</p>
+      </div>
+
+      <div id="volunteer-list" class="col-span-2 m-col-span-6 admin-info-3"></div>
+
+      <div id="volunteer-form" class="col-span-2 m-col-span-6 admin-info-3">
+        <h3 class="admin-h3">Add A New Volunteer Listing</h3>
+        <form method="POST" enctype="multipart/form-data">
+          <label for="reference">Reference Number:</label><br>
+          <input name="reference" type="text"><br><br>
+          <label for="title">Volunteer Title:</label><br>
+          <input name="title" type="text" required><br><br>
+          <label for="date">Volunteer Date:</label><br>
+          <input name="date" type="text" required><br><br>
+          <label for="location">Volunteer Location:</label><br>
+          <input name="location" type="text" required><br><br>
+          <label for="time">Volunteer Time:</label><br>
+          <input name="time" type="text" required><br><br>
+          <label for="description">Volunteer Description:</label><br>
+          <textarea name="description" required></textarea><br>
+          <input name="submit" type="submit" value="Add">
+        </form>
+      </div>
+    </section>
+
+    <section id="career-list-con" class="admin-list grid-con">
+      <div class="see-more col-span-full">
+        <h3>Career List</h3>
+        <p data-member="4">See All ▼</p>
+      </div>
+
+      <div id="career-list" class="col-span-2 m-col-span-6 admin-info-4"></div>
+
+      <div id="career-form" class="col-span-2 m-col-span-6 admin-info-4">
+        <h3 class="admin-h3">Add A New Career Opportunity</h3>
+        <form method="POST" enctype="multipart/form-data">
+          <label for="reference">Reference Number:</label><br>
+          <input name="reference" type="text"><br><br>
+          <label for="title">Career Title:</label><br>
+          <input name="title" type="text" required><br><br>
+          <label for="description">Career Description:</label><br>
+          <textarea name="description" required></textarea><br>
+          <input name="submit" type="submit" value="Add">
+        </form>
+      </div>
+    </section>
+
+    <section id="partner-list-con" class="admin-list grid-con">
+      <div class="see-more col-span-full">
+        <h3>Partner List</h3>
+        <p data-member="5">See All ▼</p>
+      </div>
+
+      <div id="partner-list" class="col-span-2 m-col-span-6 admin-info-5"></div>
+
+      <div id="partner-form" class="col-span-2 m-col-span-6 admin-info-5">
+        <h3 class="admin-h3">Add A New Partner</h3>
+        <form method="POST" enctype="multipart/form-data">
+          <label for="name">Name:</label><br>
+          <input name="name" type="text" required><br><br>
+          <label for="page_url">Link:</label><br>
+          <input name="page_url" required></textarea><br><br>
+          <input name="image_url" type="file" required><br>
+          <input name="submit" type="submit" value="Add">
+        </form>
+      </div>
     </section>
 
     <footer class="full-width-grid-con">
-      <div class="grid-con">
-        <div id="footer-logo-con" class="col-start-2 col-end-4 m-col-span-3">
-          <a href="index.html"><img id="footer-logo" src="images/logo.svg" alt=""></a>
-        </div>
-
-        <div id="footer-links" class="col-span-full m-col-span-4">
-          <ul>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="career-volunteer.html">Volunteer</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="events.html">Donate</a></li>
-          </ul>
-        </div>
-
-        <div id="sm-newsletter" class="col-span-full m-col-span-5">
-          <div id="sm-icons">
-            <a class="footer-sm-icon" href="#"><img src="images/icons/tiktok.svg" alt="TikTok Icon"></a>
-            <a class="footer-sm-icon" href="#"><img src="images/icons/youtube.svg" alt="Youtube Icon"></a>
-            <a class="footer-sm-icon" href="#"><img src="images/icons/facebook.svg" alt="Facebook Icon"></a>
-            <a class="footer-sm-icon" href="#"><img src="images/icons/instagram.svg" alt="Instagram Icon"></a>
-            <a class="footer-sm-icon" href="#"><img src="images/icons/linkedin.svg" alt="LinkedIn Icon"></a>
+        <div class="grid-con">
+          <div id="footer-logo-con" class="col-start-2 col-end-4 m-col-span-3">
+            <a href="index.html"><img id="footer-logo" src="images/logo.svg" alt=""></a>
           </div>
-
-          <p id="newsletter-title">Subscribe To Our Newsletter</p>
-
-          <form class="newsletter-sign-up" method="post" action="">
-            <label for="email"></label>
-            <input id="email" name="email" type="text">
-            <input id="newsletter-send" type="submit" value="Submit">
-          </form>
+  
+          <div id="footer-links" class="col-span-full m-col-span-4">
+            <ul>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="career-volunteer.html">Volunteer</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="events.html">Donate</a></li>
+            </ul>
+          </div>
+  
+          <div id="sm-newsletter" class="col-span-full m-col-span-5">
+            <div id="sm-icons">
+              <a class="footer-sm-icon" href="#"><img src="images/icons/tiktok.svg" alt="TikTok Icon"></a>
+              <a class="footer-sm-icon" href="#"><img src="images/icons/youtube.svg" alt="Youtube Icon"></a>
+              <a class="footer-sm-icon" href="#"><img src="images/icons/facebook.svg" alt="Facebook Icon"></a>
+              <a class="footer-sm-icon" href="#"><img src="images/icons/instagram.svg" alt="Instagram Icon"></a>
+              <a class="footer-sm-icon" href="#"><img src="images/icons/linkedin.svg" alt="LinkedIn Icon"></a>
+            </div>
+  
+            <p id="newsletter-title">Subscribe To Our Newsletter</p>
+  
+            <form class="newsletter-sign-up" method="post" action="">
+              <label for="email"></label>
+              <input id="email" name="email" type="text">
+              <input id="newsletter-send" type="submit" value="Submit">
+            </form>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
   
       <section id="bottom-menu">
         <div id="activation-button">

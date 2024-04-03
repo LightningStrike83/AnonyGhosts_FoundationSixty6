@@ -38,8 +38,6 @@ export function factsInfo() {
 
             fictiondiv.setAttribute("class", `fiction-box fiction-box-${i}`)
             factdiv.setAttribute("class", `fact-box fact-box-${i}`)
-            fictiondiv.style.display = "flex"
-            factdiv.style.display = "none"
             facttitle.setAttribute("class", "fact-title")
             facttext.setAttribute("class", "fact-text")
             fictiontitle.setAttribute("class", "fiction-title")

@@ -3,7 +3,7 @@ export function FAQ() {
     let questions = [
         {
             question: "What is Chronic Mental Illness?",
-            answer: "Chronic Mental Illness is..."//Sophia please finish this for me~
+            answer: "Chronic Mental Illness refers to long-term conditions where individuals experience persistent symptoms of mental health challenges. These conditions typically require ongoing treatment and support to help individuals manage their symptoms and improve their overall well-being over time."
         },
 
         {

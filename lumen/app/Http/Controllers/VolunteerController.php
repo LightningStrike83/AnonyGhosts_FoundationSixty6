@@ -26,7 +26,7 @@ class VolunteerController extends Controller {
     // }
 
     public function getAll() {
-        $volunteer = Volunteer::select('reference', 'title', 'description', 'location', 'date', 'time')->orderBy('id', 'asc')->get();
+        $volunteer = Volunteer::select('id','reference', 'title', 'description', 'location', 'date', 'time')->orderBy('id', 'asc')->get();
         return response()->json($volunteer);
     }
 

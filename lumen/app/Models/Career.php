@@ -12,7 +12,7 @@ class Career extends Model
      * @var array
      */
     // protected $fillable = ["firstname", "lastname", "email", "phone", "notes", "role"];
-    protected $fillable = ["reference", "title", "description"];
+    protected $fillable = ["reference", "title", "description", "id"];
 
     /**
      * The attributes excluded from the model's JSON form.

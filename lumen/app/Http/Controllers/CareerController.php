@@ -16,7 +16,7 @@ class CareerController extends Controller {
 
 
     public function getAll() {
-        $career = Career::select('reference', 'title', 'description')->orderBy('id', 'asc')->get();
+        $career = Career::select('id', 'reference', 'title', 'description')->orderBy('id', 'asc')->get();
         return response()->json($career);
     }
  

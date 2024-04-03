@@ -19,6 +19,11 @@ class BlogPostController extends Controller {
         return response()->json($blogposts);
     }
 
+    // public function get6(){
+    //     $blogposts = BlogPost::all();
+    //     return response()->json($blogposts)->limit("6");
+    // }
+
     public function getAllPostAuthors(){
         $blogposts = BlogPost::join("blog_post_authors", "blog_posts.author", "=", "blog_post_authors.id")-> select("blog_posts.id", "title", "text", "first_name", "last_name", "image_filename")->get();
          return response()->json($posts);

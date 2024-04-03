@@ -12,7 +12,7 @@ class Volunteer extends Model
      * @var array
      */
     // protected $fillable = ["firstname", "lastname", "email", "phone", "notes", "role"];
-    protected $fillable = ["reference", "title", "description", "location", "date", "time"];
+    protected $fillable = ["id", "reference", "title", "description", "location", "date", "time"];
 
     /**
      * The attributes excluded from the model's JSON form.

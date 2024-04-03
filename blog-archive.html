@@ -20,9 +20,10 @@
     <meta name="theme-color" content="#ffffff">
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script defer src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <script type="module" defer src="js/main.js"></script>
 </head>
-<body data-page="blog">
+<body data-page="blog-archive">
     <h1 class="hidden">Foundation Sixty6 Blog Page</h1>
 
     <header class="full-width-grid-con">
@@ -151,97 +152,23 @@
         </div>
     </section>
 
-    <section id="recent-posts" class="grid-con">
+    <section id="all-posts" class="grid-con">
         <div id="blog-recent-title" class="col-span-full">
             <h3 class="dmt">All Blog Posts</h3>
         </div>
 
-        <div class="blog-post col-span-2 m-col-span-4">
-          <a href="blog-post.html">
-              <div class="blog-pic" style="background-image: url('images/sophia.jpg')"></div>
-              <h3 class="blog-title dmt">A Youth's Experience With Mental Illness</h3>
-              <p class="blog-desc dmt">A woman's story of childhood mental illness.</p>
+        <div v-for="blog in blogPost" class="blog-post col-span-2 m-col-span-4">
+          <a :href="'blog-post.html?id='+ blog.id">
+              <div class="blog-pic" :style="{ backgroundImage: 'url(' + blog.image_filename + ')' }"></div>
+              <h3 class="blog-title dmt">{{blog.title}}</h3>
+              <p class="blog-desc dmt">{{blog.description}}</p>
               <div class="details-div">
-                  <p class="author-nam dmte">Sophia Westrop</p>
-                  <p class="date dmt">April 20th, 2024</p>
-              </div>
-          </a>
-      </div>
-
-      <div class="blog-post col-span-2 m-col-span-4">
-          <a href="blog-post.html">
-              <div class="blog-pic" style="background-image: url('images/hug.jpg')"></div>
-              <h3 class="blog-title dmt">Parental Support For Mental Illness</h3>
-              <p class="blog-desc dmt">How parents can support youth through their mental health struggles.</p>
-              <div class="details-div">
-                  <p class="author-name dmt">Welt Yang</p>
-                  <p class="date dmt">April 19th, 2024</p>
-              </div>
-          </a>
-      </div>
-
-      <div class="blog-post col-span-2 m-col-span-4">
-          <a href="blog-post.html">
-              <div class="blog-pic" style="background-image: url('images/drawings/bipolar-plant.png')"></div>
-              <h3 class="blog-title dmt">About Bipolar Disorder</h3>
-              <p class="blog-desc dmt">An in-depth look at how a youth can experience bipolar disorder.</p>
-              <div class="details-div">
-                  <p class="author-name dmt">Stuart Du Kamp</p>
-                  <p class="date dmt">April 18th, 2024</p>
-              </div>
-          </a>
-      </div>
-
-      <div class="blog-post col-span-2 m-col-span-4">
-          <a href="blog-post.html">
-              <div class="blog-pic" alt="" style="background-image: url('images/drawings/psychotic-depression-plant.png')"></div>
-              <h3 class="blog-title dmt">About Psychosis</h3>
-              <p class="blog-desc dmt">An in-depth look at how a youth can experience psychosis and psychotic depression.</p>
-              <div class="details-div">
-                  <p class="author-name dmt">Stuart Du Kamp</p>
-                  <p class="date dmt">April 18th, 2024</p>
-              </div>
-          </a>
-      </div>
-
-      <div class="blog-post col-span-2 m-col-span-4" >
-          <a href="blog-post.html">
-              <div class="blog-pic" style="background-image: url('images/drawings/schizophrenia-plant.png')"></div>
-              <h3 class="blog-title dmt">About Schizophrenia</h3>
-              <p class="blog-desc dmt">An in-depth look at how a youth can experience schizophrenia.</p>
-              <div class="details-div">
-                  <p class="author-name dmt">Stuart Du Kamp</p>
-                  <p class="date dmt">April 18th, 2024</p>
-              </div>
-          </a>
-      </div>
-
-      <div class="blog-post col-span-2 m-col-span-4">
-          <a href="blog-post.html">
-              <div class="blog-pic" style="background-image: url('images/logo.jpg')"></div>
-              <h3 class="blog-title dmt">Foundation Sixty6 Launches!</h3>
-              <p class="blog-desc dmt">An introductory look at Foundation Sixty6 and the website.</p>
-              <div class="details-div">
-                  <p class="author-name dmt">Suyog Ghimire</p>
-                  <p class="date dmt">April 18th, 2024</p>
+                  <p class="author-name dmt">{{blog.author}}</p>
+                  <p class="date dmt">{{blog.date}}</p>
               </div>
           </a>
       </div>
   </section>
-
-    <!--Note for MJ: For this page, you'll want to populate it using this template for every blog post:
-        <a href="">
-            <div class="blog-post col-span-2 m-col-span-3">
-                <div class="blog-pic" src="" alt="" style="background-image: url()"></div>
-                <h3 class="blog-title"></h3>
-                <p class="blog-desc"></p>
-                <div class="details-div">
-                    <p class="author-name"></p>
-                    <p class="date"></p>
-                </div>
-            </div>
-        </a>
-    -->
 
     <footer class="full-width-grid-con">
       <div class="grid-con">

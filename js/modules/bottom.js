@@ -166,7 +166,5 @@ export function bottomMenu() {
 
     activateButton.addEventListener("click", openBottomMenu)
     localStorage.setItem("theme", theme)
-
-    console.log(currentTheme)
 }
     
