@@ -16,7 +16,7 @@ class PartnerController extends Controller {
 
 
     public function getAll() {
-        $partner = Partner::select('name', 'image_url', 'page_url')->orderBy('id', 'asc')->get();
+        $partner = Partner::select('id', 'name', 'image_url', 'page_url')->orderBy('id', 'asc')->get();
         return response()->json($partner);
     }
  
