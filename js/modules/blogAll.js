@@ -1,4 +1,4 @@
-export function blogCreation() {
+export function blogCreationAll() {
     const blogPosts = Vue.createApp({
         created() {
             fetch('http://localhost/AnonyGhosts_FoundationSixty6/lumen/public/blog_posts')
@@ -15,12 +15,16 @@ export function blogCreation() {
         data() {
             return {
                 blogPost: [],
+                id: "",
                 title: "",
+                description: "",
                 author: "",
                 date: "",
+                text: "",
+                image_filename: "",
             }
-        }
+        },
     })
 
-    blogPosts.mount("#recent-posts")
+    blogPosts.mount("#all-posts")
 }

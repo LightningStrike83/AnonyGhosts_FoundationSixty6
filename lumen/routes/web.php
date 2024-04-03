@@ -20,6 +20,7 @@ $router->get('/', function () use ($router) {
 //Blog Posts
 $router->get("/blog_posts", "BlogPostController@getAll");
 $router->get("/blog_posts/{id}", "BlogPostController@getOne");
+$router->get("/blog_posts_recent", "BlogPostController@get6");
 // $router->get("/blog_postsandblog_posts_authors", "BlogPostController@getAllBlogPostAuthor");
 // $router->get("/blog_postsandblog_posts_authors/{id}", "BlogPostController@getOneBlogPostAuthor");
 $router->post("/blog_posts/add", "BlogPostController@save");

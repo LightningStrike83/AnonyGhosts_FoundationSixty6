@@ -58,7 +58,6 @@ export function adminScripts() {
         fetch(`${baseURL}blog_posts`)
         .then(result => result.json())
         .then(function(result){
-            console.log(result)
             result.forEach(result => {
                 let div = document.createElement("div")
                 let id = document.createElement("p")

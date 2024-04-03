@@ -1,5 +1,7 @@
 import { adminScripts } from "./modules/admin.js";
-import { blogCreation } from "./modules/blog.js";
+import { blogOne } from "./modules/blog-one.js";
+import { blogCreationRecent } from "./modules/blog-recent.js";
+import { blogCreationAll } from "./modules/blogAll.js";
 import { bottomMenu } from "./modules/bottom.js";
 import { donateVideo } from "./modules/donate.js";
 import { factsInfo } from "./modules/facts.js";
@@ -19,7 +21,15 @@ if (document.body.dataset.page === 'admin') {
 }
 
 if (document.body.dataset.page === 'blog') {
-    blogCreation()
+    blogCreationRecent()
+}
+
+if (document.body.dataset.page === 'blog-archive') {
+    blogCreationAll()
+}
+
+if (document.body.dataset.page === 'blog-single') {
+    blogOne()
 }
 
 if (document.body.dataset.page === 'services') {
