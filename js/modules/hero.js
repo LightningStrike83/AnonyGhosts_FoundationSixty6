@@ -9,8 +9,8 @@ export function heroHeader() {
 
     let heroinfo = [
         {
-            heroText: "Fostering Minds, Building Resilience",
-            supportText: "We are Foundation Sixty6, a beacon of hope for youth mental health, dedicated to bridging the gaps in mental health services and, fostering a future of resilience and well-being.",
+            heroText: "Building Support for Youth Mental Health",
+            supportText: "We are Foundation Sixty6, a beacon of hope for youth mental health, dedicated to bridging the gaps in mental health services, and fostering a future of resilience and well-being.",
             background: "hp.png",
             link: "index.html"
         },
