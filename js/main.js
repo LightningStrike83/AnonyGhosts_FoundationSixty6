@@ -1,3 +1,4 @@
+import { aboutPartners } from "./modules/about.js";
 import { adminScripts } from "./modules/admin.js";
 import { blogOne } from "./modules/blog-one.js";
 import { blogCreationRecent } from "./modules/blog-recent.js";
@@ -19,6 +20,10 @@ if (document.body.dataset.page === 'faq') {
 
 if (document.body.dataset.page === 'admin') {
     adminScripts()
+}
+
+if (document.body.dataset.page === 'about') {
+    aboutPartners()
 }
 
 if (document.body.dataset.page === 'blog') {
