@@ -28,10 +28,10 @@ class ContactController extends Controller {
     
     public function save(Request $request) {
         $this->validate($request, [
-            'name' => 'required',
+            'full_name' => 'required',
             'email' => 'required',
             'subject' => 'required',
-            'textinput' => 'required'
+            'message' => 'required'
         ]);
         $contact = Contact::create($request->all());
         return response()->json($contact, 201);
@@ -41,10 +41,10 @@ class ContactController extends Controller {
         $contact = Contact::findOrFail($id);
     
         $this->validate($request, [
-            'name' => 'required',
+            'full_name' => 'required',
             'email' => 'required',
             'subject' => 'required',
-            'textinput' => 'required'
+            'message' => 'required'
         ]);
         $contact->update($request->all());
         return response()->json($contact);

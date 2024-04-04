@@ -12,7 +12,7 @@ class Partner extends Model
      * @var array
      */
     // protected $fillable = ["firstname", "lastname", "email", "phone", "notes", "role"];
-    protected $fillable = ["name", "image_url", "page_url", "id"];
+    protected $fillable = ["id", "name", "image_url", "page_url"];
 
     /**
      * The attributes excluded from the model's JSON form.

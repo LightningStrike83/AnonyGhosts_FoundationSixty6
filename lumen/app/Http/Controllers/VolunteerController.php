@@ -26,45 +26,48 @@ class VolunteerController extends Controller {
     // }
 
     public function getAll() {
-        $volunteer = Volunteer::select('id','reference', 'title', 'description', 'location', 'date', 'time')->orderBy('id', 'asc')->get();
+        $volunteers = Volunteer::all();
+        return response()->json($volunteers);
+    }
+
+    public function getOne($id) {
+        $volunteer = Volunteer::find($id);
         return response()->json($volunteer);
     }
 
-    // public function save(Request $request) {
-    //     $this->validate($request, [
-    //         'firstname' => 'required',
-    //         'lastname' => 'required',
-    //         'email' => 'required',
-    //         'phone' => 'required',
-    //         'role' => 'required'
-    //     ]);
-    //     $volunteer = Volunteer::create($request->all());
-    //     return response()->json($volunteer, 201);
-    // }
+    public function save(Request $request) {
+        $this->validate($request, [
+            'reference' => 'required',
+            'title' => 'required',
+            'description' => 'required',
+            'location' => 'required',
+            'date' => 'required',
+            'time' => 'required'
+        ]);
+        $volunteer = Volunteer::create($request->all());
+        return response()->json($volunteer, 201);
+    }
 
+    public function update(Request $request, $id) {
+        $volunteer = Volunteer::findOrFail($id);
+    
+        $this->validate($request, [
+            'reference' => 'required',
+            'title' => 'required',
+            'description' => 'required',
+            'location' => 'required',
+            'date' => 'required',
+            'time' => 'required'
+        ]);
+        $volunteer->update($request->all());
+        return response()->json($volunteer);
+    }
 
-        
-    // public function update(Request $request, $id) {
-    //     $volunteer = Volunteer::findOrFail($id);
-    
-    //     $this->validate($request, [
-    //         'firstname' => 'required',
-    //         'lastname' => 'required',
-    //         'email' => 'required',
-    //         'phone' => 'required',
-    //         'role' => 'required'
-    //     ]);
-    //     $volunteer->update($request->all());
-    //     return response()->json($volunteer);
-    // }
-    
-    
-    // public function delete($id) {
-    //     $volunteer = Volunteer::findOrFail($id);
-    //     $volunteer->delete();
-    //     return response()->json(null, 204);
-    // }
- 
+    public function delete($id) {
+        $volunteer = Volunteer::findOrFail($id);
+        $volunteer->delete();
+        return response()->json(null, 204);
+    }
 
 }
 

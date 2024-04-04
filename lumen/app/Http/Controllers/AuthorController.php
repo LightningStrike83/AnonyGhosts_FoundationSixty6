@@ -14,9 +14,9 @@ class AuthorController extends Controller {
      * @return void
      */
 
-     public function getAll(){
-        $authors = Author::all();
-        return response()->json($authors);
+     public function getAll() {
+        $author = Author::select('id', 'name')->orderBy('id', 'asc')->get();
+        return response()->json($author);
     }
 
     public function getOne($id){
@@ -27,8 +27,7 @@ class AuthorController extends Controller {
 
     public function save(Request $request) {
         $this->validate($request, [
-            'first_name' => 'required',
-            'last_name' => 'required',
+            'name' => 'required'
         ]);
         $author = Author::create($request->all());
         return response()->json($author, 201);
@@ -38,8 +37,7 @@ class AuthorController extends Controller {
         $author = Author::findOrFail($id);
     
         $this->validate($request, [
-            'first_name' => 'required',
-            'last_name' => 'required',
+            'name' => 'required'
         ]);
         $author->update($request->all());
         return response()->json($author);
@@ -51,6 +49,7 @@ class AuthorController extends Controller {
         $author->delete();
         return response()->json(null, 204);
     }
+    
 
 
  
