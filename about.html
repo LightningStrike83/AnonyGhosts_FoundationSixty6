@@ -21,6 +21,7 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script defer src="https://kit.fontawesome.com/a7c4f622e4.js" crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <script type="module" defer src="js/main.js"></script>
 </head>
 <body data-page="about">
@@ -155,15 +156,11 @@
     <section id="our-mission" class="grid-con">
         <div id="mission-text" class="col-span-full m-col-span-6">
             <h3 class="dmt">Our Mission</h3>
-            <p class="dmt">To facilitate improved access to mental healthcare for youth between the ages of 16 and 25 suffering from psychosis, bipolar disorder (BP), and schizophrenia, specifically within Southwestern Ontario.</p>
-            <div id="short-pic"></div>
+            <p class="dmt">Our mission is to facilitate improved access to mental healthcare for youth aged 16-25 suffering from complex mental health conditions, as well as support them and their families. We are fighting for a future where care is more accessible and there is a greater understanding of mental health. <br><br> We aim to create a network of of physicians and mental healthcare providers who will offer counselling services for free, or at a reduced rate. We aim to create long term employment opportunities that understand the flexibility and support required by people with severe mental health challenges.</p>
+            <p class="dmt"></p>
         </div>
         <div id="long-pic" class="col-span-full m-col-span-6"></div>
     </section>
-
-    <div class="grid-con">
-      <div class="col-span-full divider"></div>
-    </div>
 
     <section id="our-story" class="full-width-grid-con">
         <div id="story-con" class="grid-con">
@@ -180,7 +177,9 @@
                 </video>
 
                 <div class="video-controls hidden">
-                  <img id="video-logo" src="images/footer-logo.svg" alt="Video Logo">
+                  <div id="video-logo-con">
+                    <img id="video-logo" src="images/logo.svg" alt="Video Logo">
+                  </div>
         
                   <button id="play-button">
                     <i class="fa-solid fa-play"></i>
@@ -206,10 +205,6 @@
         </div>
     </section>
 
-    <div class="grid-con">
-      <div class="col-span-full divider"></div>
-    </div>
-
     <section id="our-leadership" class="grid-con">
         <div id="leadership-text" class="col-span-full">
             <h3 class="dmt">Our Leadership</h3>
@@ -218,45 +213,63 @@
 
         <div id="members" class="col-span-full">
             <div class="member-profile">
-                <div id="stuart-icon" class="member-pic"></div>
+                <div id="stuart-icon" class="member-pic">
+                  <div class="about-shader"></div>
+                  <p class="member-text dmt desktop">"This foundation as I see it is to provide opportunities for a lifetime, but more widely, to provide hope to people out there that people do care."</p>
+                </div>
                 <div class="green-bumper"></div>
                 <p class="member-name dmt">Stuart du Kamp</p>
-                <p class="member-text dmt">"This foundation as I see it is to provide opportunities for a lifetime, but more widely, to provide hope to people out there that people do care."</p>
+                <p class="member-text dmt portable">"This foundation as I see it is to provide opportunities for a lifetime, but more widely, to provide hope to people out there that people do care."</p>
             </div>
 
             <div class="member-profile">
-                <div id="aimee-icon" class="member-pic"></div>
+                <div id="aimee-icon" class="member-pic">
+                  <div class="about-shader"></div>
+                  <p class="member-text dmt desktop">"We identfied all these areas through our own experience with Caelan and wanted to make a difference so we started this foundation to do that."</p>
+                </div>
                 <div class="green-bumper"></div>
                 <p class="member-name dmt">Aimee Hagerty</p>
-                <p class="member-text dmt">"We identfied all these areas through our own experience with Caelan and wanted to make a difference so we started this foundation to do that."</p>
+                <p class="member-text dmt portable">"We identfied all these areas through our own experience with Caelan and wanted to make a difference so we started this foundation to do that."</p>
             </div>
 
             <div class="member-profile">
-                <div id="caelan-icon" class="member-pic"></div>
+                <div id="caelan-icon" class="member-pic">
+                  <div class="about-shader"></div>
+                  <p class="member-text dmt desktop">"This foundation is meant to bring together not only people and families but doctors, caregivers, and others who are willing to provide support."</p>
+                </div>
                 <div class="green-bumper"></div>
                 <p class="member-name dmt">Caelan Hagerty</p>
-                <p class="member-text dmt">"This foundation is meant to bring together not only people and families but doctors, caregivers, and others who are willing to provide support."</p>
+                <p class="member-text dmt portable">"This foundation is meant to bring together not only people and families but doctors, caregivers, and others who are willing to provide support."</p>
             </div>
 
             <div class="member-profile">
-                <div id="bill-icon" class="member-pic"></div>
+                <div id="bill-icon" class="member-pic">
+                  <div class="about-shader"></div>
+                  <p class="member-text dmt desktop">"We're trying to help other people trying to navigate through the services that are out there."</p>
+                </div>
                 <div class="green-bumper"></div>
                 <p class="member-name bottom-member dmt">Bill Hagerty</p>
-                <p class="member-text dmt">"We're trying to help other people trying to navigate through the services that are out there."</p>
+                <p class="member-text dmt portable">"We're trying to help other people trying to navigate through the services that are out there."</p>
             </div>
 
             <div class="member-profile">
-                <div id="russell-icon" class="member-pic"></div>
+                <div id="russell-icon" class="member-pic">
+                  <div class="about-shader"></div>
+                  <p class="member-text dmt desktop">"I see struggles and it's compelling to make you want to work, to bring this to people's attention."</p>
+                </div>
                 <div class="green-bumper"></div>
                 <p class="member-name bottom-member dmt">Russell Levangie</p>
-                <p class="member-text dmt">"I see struggles and it's compelling to make you want to work, to bring this to people's attention."</p>
+                <p class="member-text dmt portable">"I see struggles and it's compelling to make you want to work, to bring this to people's attention."</p>
             </div>
 
             <div class="member-profile">
-                <img id="you-icon" class="member-pic" src="images/boy.svg">
+                <div id="you-icon" class="member-pic">
+                  <div class="about-shader"></div>
+                  <p class="member-text dmt desktop">You are our sixth and key member of the Foundation</p>
+                </div>
                 <div class="green-bumper"></div>
                 <p class="member-name bottom-member dmt">You</p>
-                <p class="member-text dmt">You are our sixth and key member of the Foundation</p>
+                <p class="member-text dmt portable">You are our sixth and key member of the Foundation</p>
             </div>
         </div>
     </section>
@@ -281,40 +294,19 @@
     <section id="our-partners" class="grid-con">
         <div id="partner-text" class="col-span-full">
             <h3 class="dmt">Our Empowering Partners</h3>
+            <p>These partners believe in our cause and help us in providing support and opportunities to those who need it.</p>
         </div>
 
         <div id="partner-con" class="col-span-full">
-            <a href="https://www.fanshawec.ca/">
-              <div class="partner-info">
-                  <div class="sponsor-icon" id="fanshawe-logo"></div>
-                  <p class="dmt">Fanshawe College</p>
-              </div>
-            </a>
-
-            <a href="">
-              <div class="partner-info">
-                <div class="sponsor-icon" id="sunflower-logo"></div>
-                <p class="dmt">Blue Sunflower Corporation</p>
-              </div>
-            </a>
-
-            <a href="https://www.goodlifefitness.com/">
-              <div class="partner-info">
-                  <div class="sponsor-icon" id="goodlife-logo"></div>
-                  <p class="dmt">Goodlife Fitness</p>
-              </div>
-            </a>
+            <div v-for="partner in partnerList" class="partner-info-con">
+              <a :href="partner.page_url">
+                <div class="partner-info">
+                  <div class="partner-icon" :style="{ backgroundImage: 'url(../images/' + partner.image_url + ')' }"></div>
+                  <p class="dmt">{{partner.name}}</p>
+                </div>
+              </a>
+            </div>
         </div>
-
-        <!--
-          Template for MJ:
-            <a href="">
-              <div class="sponsor-icon" class="partner-info" style="background-image: url('images/')";>
-                  <div></div>
-                  <p></p>
-              </div>
-            </a>
-        -->
 
         <div id="become-con" class="col-span-full">
             <h3 class="dmt" id="about-title-mobile">Become A Partner?</h3>
