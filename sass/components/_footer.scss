@@ -84,6 +84,13 @@ footer {
     margin-bottom: 50px;
 }
 
+.footer-sm-icon {
+    transition: all ease-in-out 0.5s;
+    &:hover {
+        opacity: 70%;
+    }
+}
+
 #footer-links li:not(:last-of-type) {
     margin-bottom: 15px;
 }
