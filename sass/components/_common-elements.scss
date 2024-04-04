@@ -7,6 +7,10 @@ body {
     transition: all ease-in-out 0.5s;
 }
 
+a {
+    text-decoration: none;
+}
+
 .full-width-grid-con {
     .grid-con {
         margin: 0;
@@ -32,9 +36,11 @@ body {
 input {
     height: 40px;
     border: none;
+    border-radius: 10px;
 }
 
 textarea {
+    border-radius: 10px;
     height: 80px;
     border: none;
     resize: none;
