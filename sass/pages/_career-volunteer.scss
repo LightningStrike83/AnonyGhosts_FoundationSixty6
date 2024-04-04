@@ -67,13 +67,22 @@
 }
 
 .c-box-listing, .v-box-listing {
-    background-color: v.$green;
+    border-left: 1px solid v.$green;
+    border-right: 1px solid v.$green;
     padding-left: 5%;
+    padding-right: 5%;
     padding-top: 20px;
-    padding-bottom: 20px;
+    .cv-break {
+        margin-top: 20px;
+        border-bottom: 3px solid v.$green;
+    }
     &:last-of-type {
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
+        border-bottom: 1px solid v.$green;
+        .cv-break {
+            border-bottom: none;
+        }
     }
 }
 
@@ -121,6 +130,16 @@
 
 #cv-send {
     margin-bottom: 20px;
+}
+
+#opportunities-title {
+    p {
+        text-align: center;
+    }
+}
+
+#cv-build {
+    background-color: v.$bg-green;
 }
 
 @media screen and (min-width: 768px) {

@@ -4,6 +4,7 @@ import { blogOne } from "./modules/blog-one.js";
 import { blogCreationRecent } from "./modules/blog-recent.js";
 import { blogCreationAll } from "./modules/blogAll.js";
 import { bottomMenu } from "./modules/bottom.js";
+import { careervolunteer } from "./modules/career-volunteer.js";
 import { donateVideo } from "./modules/donate.js";
 import { eventInfo } from "./modules/events.js";
 import { factsInfo } from "./modules/facts.js";
@@ -36,6 +37,10 @@ if (document.body.dataset.page === 'blog-archive') {
 
 if (document.body.dataset.page === 'blog-single') {
     blogOne()
+}
+
+if (document.body.dataset.page === 'career-volunteer') {
+    careervolunteer()
 }
 
 if (document.body.dataset.page === 'events') {
