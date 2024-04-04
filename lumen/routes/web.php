@@ -26,6 +26,12 @@ $router->post("/blog_posts/add", "BlogPostController@save");
 $router->post('/blog_posts/edit/{id}', 'BlogPostController@update');
 $router->delete('/blog_posts/delete/{id}', 'BlogPostController@delete');
 
+//Contacts
+$router->get("/contacts", "ContactController@getAll");
+$router->get("/contacts/{id}", "ContactController@getOne");
+$router->post("/contacts/add", "ContactController@save");
+$router->post('/contacts/edit/{id}', 'ContactController@update');
+$router->delete('/contacts/delete/{id}', 'ContactController@delete');
 
 //Events
 $router->get("/events", "EventController@getAll");
@@ -69,4 +75,7 @@ $router->delete('/authors/delete/{id}', 'AuthorController@delete');
 
 // Newsletter Subscription
 $router->post('/subscribe', 'SubscriptionController@subscribe');
+
+//Contact
+$router->post('/contact/add', 'ContactController@save');
 

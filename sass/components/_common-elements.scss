@@ -105,6 +105,22 @@ video {
     }
 }
 
+#feedback-area, #message-confirm {
+    margin-top: 20px;
+    p {
+        padding: 10px;
+        border-radius: 20px;
+        background-color: white;
+    }
+}
+
+#newsletter-confirm, #newsletter-feedback {
+    p {
+        color: white;
+        margin-bottom: 20px;
+    }
+}
+
 @media screen and (min-width: 768px) {
     textarea {
         height: 120px;
