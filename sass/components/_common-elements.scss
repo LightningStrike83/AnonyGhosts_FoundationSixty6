@@ -37,7 +37,7 @@ input {
 textarea {
     height: 80px;
     border: none;
-    margin-bottom: 30px;
+    resize: none;
 }
 
 .send-button {
@@ -89,7 +89,6 @@ video {
 }
 
 .form-style {
-    padding-bottom: 30px;
     margin-bottom: 30px;
     input {
         width: 100%;
@@ -101,6 +100,10 @@ video {
 }
 
 @media screen and (min-width: 768px) {
+    textarea {
+        height: 120px;
+    }
+
     .hero-image {
         height: 315px;
     }
@@ -130,6 +133,10 @@ video {
 }
 
 @media screen and (min-width: 1200px) {
+    textarea {
+        height: 150px;
+    }
+    
     .hero-image {
         height: 500px;
     }
