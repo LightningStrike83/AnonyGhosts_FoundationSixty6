@@ -19,15 +19,10 @@ class BlogPostController extends Controller {
         return response()->json($blogposts);
     }
 
-    // public function get6(){
-    //     $blogposts = BlogPost::all();
-    //     return response()->json($blogposts)->limit("6");
+    // public function getAllPostAuthors(){
+    //     $blogposts = BlogPost::join("blog_post_authors", "blog_posts.author", "=", "blog_post_authors.id")-> select("blog_posts.id", "title", "text", "first_name", "last_name", "image_filename")->get();
+    //      return response()->json($blogposts);
     // }
-
-    public function getAllPostAuthors(){
-        $blogposts = BlogPost::join("blog_post_authors", "blog_posts.author", "=", "blog_post_authors.id")-> select("blog_posts.id", "title", "text", "first_name", "last_name", "image_filename")->get();
-         return response()->json($posts);
-    }
 
     public function getOne($id){
 
@@ -35,17 +30,19 @@ class BlogPostController extends Controller {
         return response()->json($blogpost);
     }
 
-    public function getOnePostAuthor($id) {
-        $blogpost = BlogPost::join("blog_posts.author", "blog_posts.author", "=", "blog_posts.author.id")-> where("articles.id", "=", $id)->get();
-        return response()->json($blogpost);
-    }
+    // public function getOnePostAuthor($id) {
+    //     $blogpost = BlogPost::join("blog_posts.author", "blog_posts.author", "=", "blog_posts.author.id")-> where("articles.id", "=", $id)->get();
+    //     return response()->json($blogpost);
+    // }
 
     public function save(Request $request) {
         $this->validate($request, [
             'title' => 'required',
-            'text' => 'required',
+            'description' => 'required',
             'author' => 'required',
-            'image' => 'required'
+            'text' => 'required',
+            'date' => 'required',
+            'image_filename' => 'required'
         ]);
         $blogpost = BlogPost::create($request->all());
         return response()->json($blogpost, 201);
@@ -56,9 +53,11 @@ class BlogPostController extends Controller {
     
         $this->validate($request, [
             'title' => 'required',
-            'text' => 'required',
+            'description' => 'required',
             'author' => 'required',
-            'image' => 'required'
+            'text' => 'required',
+            'date' => 'required',
+            'image_filename' => 'required'
         ]);
         $blogpost->update($request->all());
         return response()->json($blogpost);
@@ -69,7 +68,6 @@ class BlogPostController extends Controller {
         $blogpost->delete();
         return response()->json(null, 204);
     }
-
  
 
 }

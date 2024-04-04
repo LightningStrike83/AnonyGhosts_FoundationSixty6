@@ -11,7 +11,7 @@ class Author extends Model
      *
      * @var array
      */
-    protected $fillable = ["first_name", "last_name", "about"];
+    protected $fillable = ["name"];
 
     /**
      * The attributes excluded from the model's JSON form.

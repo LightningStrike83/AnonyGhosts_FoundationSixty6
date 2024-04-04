@@ -27,10 +27,12 @@ class EventController extends Controller {
 
     public function save(Request $request) {
         $this->validate($request, [
-            'title' => 'required',
             'date' => 'required',
+            'time' => 'required',
+            'title' => 'required', // 'title' => 'required|unique:events'
+            'place' => 'required',
             'description' => 'required',
-            'photo' => 'required'
+            'image_filename' => 'required'
         ]);
         $event = Event::create($request->all());
         return response()->json($event, 201);
@@ -40,10 +42,12 @@ class EventController extends Controller {
         $event = Event::findOrFail($id);
     
         $this->validate($request, [
-            'title' => 'required',
             'date' => 'required',
+            'time' => 'required',
+            'title' => 'required',
+            'place' => 'required',
             'description' => 'required',
-            'photo' => 'required'
+            'image_filename' => 'required'
         ]);
         $event->update($request->all());
         return response()->json($event);
