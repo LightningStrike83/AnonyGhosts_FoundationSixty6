@@ -29,10 +29,10 @@ export function donateVideo() {
     function changeVideo() {
         if (this.id === "counsellor-video") {
             videoCon.style.display = "block"
-            video.src = "video/counsellor-sample.MOV"
+            video.src = "video/counsellor-video.mp4"
         } else if (this.id === "youth-video") {
             videoCon.style.display = "block"
-            video.src = "video/youth-clip.mp4"
+            video.src = "video/youth-video.mp4"
         }
     }
 
