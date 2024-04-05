@@ -20,9 +20,9 @@ class CareerController extends Controller {
         return response()->json($career);
     }
 
-    public function getOne($reference) {
+    public function getOne($id) {
 
-        $career = Career::find($reference);
+        $career = Career::find($id);
         return response()->json($career);
     }
 

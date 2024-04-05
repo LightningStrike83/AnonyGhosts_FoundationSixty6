@@ -52,4 +52,48 @@
 
 #volunteer-list, #volunteer-form, #blog-list, #blog-form, #event-form, #event-list, #career-form, #career-list, #partner-list, #partner-form {
     display: none;
+
+    input:not(.admin-submit) {
+        width: 50%;
+    }
+
+    textarea {
+        width: 50%;
+    }
+}
+
+.admin-submit {
+    width: 15%;
+}
+
+.admin-form {
+    padding: 30px;
+    background-color: v.$bg-green;
+    flex-direction: column;
+    align-items: center;
+
+    form {
+        width: 50%;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        grid-column: 2/3;
+    }
+
+    input:not(.admin-submit) {
+        width: 100%;
+    }
+
+    textarea {
+        width: 100%;
+    }
+
+    .admin-submit {
+        width: 20%;
+        margin-bottom: 30px;
+    }
 }
