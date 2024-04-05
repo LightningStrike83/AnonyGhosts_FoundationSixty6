@@ -17,6 +17,7 @@
 }
 
 #home-hero-link {
+    grid-column: 2/3;
     text-decoration: none;
 }
 
@@ -249,7 +250,23 @@
     padding-bottom: 20px;
 }
 
+.arrow {
+    display: none;
+    font-size: 36px;
+    align-self: center;
+    color: v.$green;
+    transition: all ease-in-out 0.5s;
+    cursor: pointer;
+    &:hover {
+        opacity: 70%;
+    }
+}
+
 @media screen and (min-width: 768px) {
+    .arrow {
+        display: block;
+    }
+
     .home-hero-supplementary-text {
         font-size: 15px;
         padding: 20px;
@@ -409,36 +426,36 @@
     }
 }
 
-@media screen and (min-width: 1920px) {
-    #home-hero {
-        .hero-text {
-            padding-bottom: 40px;
-            line-height: normal;
-        }
-    }
+// @media screen and (min-width: 1920px) {
+//     #home-hero {
+//         .hero-text {
+//             padding-bottom: 40px;
+//             line-height: normal;
+//         }
+//     }
 
-    .home-hero-supplementary-text {
-        font-size: 25px;
-        padding-bottom: 40px;
-    }
+//     .home-hero-supplementary-text {
+//         font-size: 25px;
+//         padding-bottom: 40px;
+//     }
 
-    #waw-image {
-        height: 780px;
-    }
+//     #waw-image {
+//         height: 780px;
+//     }
 
-    .ff-div {
-        height: 480px;
-        margin-bottom: 150px;
-    }
+//     .ff-div {
+//         height: 480px;
+//         margin-bottom: 150px;
+//     }
 
-    .fiction-title, .fact-title {
-        font-size: 30px;
-    }
+//     .fiction-title, .fact-title {
+//         font-size: 30px;
+//     }
 
-    .mental-health-info {
-        height: 500px;
-        h3 {
-            font-size: 36px;
-        }
-    }
-}
+//     .mental-health-info {
+//         height: 500px;
+//         h3 {
+//             font-size: 36px;
+//         }
+//     }
+// }

@@ -5,7 +5,10 @@ export function heroHeader() {
     const heroLink = document.querySelector("#home-hero-link")
     let i = 0
 
-    const interval = setInterval(changehero, 7000)
+    const interval = setInterval(changehero, 6000)
+
+    const leftArrow = document.querySelector("#left-arrow")
+    const rightArrow = document.querySelector("#right-arrow")
 
     let heroinfo = [
         {
@@ -44,4 +47,17 @@ export function heroHeader() {
     }
 
     changehero()
+
+    function previousHero() {
+        i++
+
+        if (i >= heroinfo.length) {
+            i = 0
+        }
+
+        changehero()
+    }
+
+    leftArrow.addEventListener("click", previousHero)
+    rightArrow.addEventListener("click", changehero)
 }

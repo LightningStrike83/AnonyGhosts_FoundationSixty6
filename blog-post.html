@@ -69,9 +69,10 @@
 
         <a href="donate.html" class="col-span-full m-col-span-2">
           <div id="donate-button">
-            <div><span class="donate-text">Donate</div>
+            <div><span class="donate-text">Donate</span></div>
           </div>
         </a>
+        </div>
     </header>
 
     <div id="app" class="full-width-grid-con">
@@ -83,9 +84,12 @@
           <div class="col-span-full divider"></div>
         </div>
 
+      <div class="catch-handle col-span-full"></div>
+
       <section id="blog-post-content" class="grid-con">
+        <h2 class="hidden">{{blogPost.title}}</h2>
           <div id="content" class="col-span-full">
-              <img id="content-image" :src="blogPost.image_filename" alt="">
+              <img id="content-image" :src="blogPost.image_filename" :alt="blogPost.title">
               <p id="info-text" class="dmt"></p>
           </div>
       </section>
@@ -134,31 +138,33 @@
       </div>
     </footer>
   
-      <section id="bottom-menu">
-        <div id="activation-button">
-          <img class="bottom-icon" src="images/icons/information2.png" alt="Menu Icon">
+    <section id="bottom-menu">
+      <h2 class="hidden">Bottom Menu</h2>
+      <div id="activation-button">
+        <img class="bottom-icon" src="images/icons/information2.png" alt="Menu Icon">
+      </div>
+      
+      <template id="button-template">
+        <div class="clone-div">
+          <img class="clone-img">
         </div>
-        
-        <template id="button-template">
-          <div class="clone-div">
-            <img class="clone-img">
-          </div>
-        </template>
-      </section>
-  
-      <section class="nav-lightbox" class="lightbox">
-        <div class="grid-con">
-          <p class="lb-close col-start-4 col-end-5">X</p>
-          <div id="lightbox-menu" class="col-span-full">
-            <p><a href="get-services.html">Services</a></p>
-            <p><a href="network.html">Network</a></p>
-            <p><a href="about.html">About</a></p>
-            <p><a href="events.html">Events</a></p>
-            <p><a href="career-volunteer.html">Careers & Volunteering</a></p>
-            <p><a href="blog.html">Blog</a></p>
-            <p><a href="contact.html">Contact</a></p>
-          </div>
+      </template>
+    </section>
+
+    <section class="nav-lightbox lightbox">
+      <h2 class="hidden">Mobile Menu</h2>
+      <div class="grid-con">
+        <p class="lb-close col-start-4 col-end-5">X</p>
+        <div id="lightbox-menu" class="col-span-full">
+          <p><a href="get-services.html">Services</a></p>
+          <p><a href="network.html">Network</a></p>
+          <p><a href="about.html">About</a></p>
+          <p><a href="events.html">Events</a></p>
+          <p><a href="career-volunteer.html">Careers & Volunteering</a></p>
+          <p><a href="blog.html">Blog</a></p>
+          <p><a href="contact.html">Contact</a></p>
         </div>
-      </section>
+      </div>
+    </section>
   </body>
   </html>

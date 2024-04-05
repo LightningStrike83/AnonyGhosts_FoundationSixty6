@@ -69,13 +69,15 @@
 
         <a href="donate.html" class="col-span-full m-col-span-2">
           <div id="donate-button">
-            <div><span class="donate-text">Donate</div>
+            <div><span class="donate-text">Donate</span></div>
           </div>
         </a>
+      </div>
     </header>
     
     <section id="cv-hero" class="full-width-grid-con">
         <div class="col-span-full hero-image">
+          <h2 class="hidden">Careers and Volunteers Hero Image</h2>
             <p class="hero-text">Careers and Volunteer Opportunities</p>
         </div>
     </section>
@@ -109,6 +111,7 @@
         </div>
         <div id="volunteer-opportunities" class="col-span-full m-col-start-2 m-col-end-7 cv-div">
             <h3 class="cv-box-title">Volunteer Opportunities</h3>
+            <div class="catch-handle"></div>
             <div class="v-box-listing" v-for="volunteer in volunteerList">
                 <h3 class="reference-number dmt">{{volunteer.reference}}</h3>
                 <div class="v-details">
@@ -124,6 +127,7 @@
         </div>
         <div id="career-opportunities" class="col-span-full m-col-start-7 m-col-end-12 cv-div">
             <h3 class="cv-box-title">Career Opportunities</h3>
+            <div class="catch-handle"></div>
             <div class="c-box-listing" v-for="career in careerList">
                 <h3 class="reference-number dmt">{{career.reference}}</h3>
                 <p class="c-position dmt">{{career.title}}</p>
@@ -134,12 +138,13 @@
     </section>
 
     <section id="cv-form" class="full-width-grid-con">
+      <h2 class="hidden">Contact Form</h2>
         <div id="cv-contact">
             <div id="cv-form-con" class="grid-con">
               <div id="cv-form-t" class="col-span-full m-col-start-2 m-col-end-12">
                 <form id="cv-page-form" class="contact-form">
                   <div class="form-style">
-                    <label for="full-name">Full Name*</label><br><br>
+                    <label for="full_name">Full Name*</label><br><br>
                     <input id="full_name" name="full_name" type="text" placeholder="Your Full Name"><br>
                   </div>
                   <div class="form-style">
@@ -208,31 +213,33 @@
       </div>
     </footer>
   
-      <section id="bottom-menu">
-        <div id="activation-button">
-          <img class="bottom-icon" src="images/icons/information2.png" alt="Menu Icon">
+    <section id="bottom-menu">
+      <h2 class="hidden">Bottom Menu</h2>
+      <div id="activation-button">
+        <img class="bottom-icon" src="images/icons/information2.png" alt="Menu Icon">
+      </div>
+      
+      <template id="button-template">
+        <div class="clone-div">
+          <img class="clone-img">
         </div>
-        
-        <template id="button-template">
-          <div class="clone-div">
-            <img class="clone-img">
-          </div>
-        </template>
-      </section>
-  
-      <section class="nav-lightbox" class="lightbox">
-        <div class="grid-con">
-          <p class="lb-close col-start-4 col-end-5">X</p>
-          <div id="lightbox-menu" class="col-span-full">
-            <p><a href="get-services.html">Services</a></p>
-            <p><a href="network.html">Network</a></p>
-            <p><a href="about.html">About</a></p>
-            <p><a href="events.html">Events</a></p>
-            <p><a href="career-volunteer.html">Careers & Volunteering</a></p>
-            <p><a href="blog.html">Blog</a></p>
-            <p><a href="contact.html">Contact</a></p>
-          </div>
+      </template>
+    </section>
+
+    <section class="nav-lightbox lightbox">
+      <h2 class="hidden">Mobile Menu</h2>
+      <div class="grid-con">
+        <p class="lb-close col-start-4 col-end-5">X</p>
+        <div id="lightbox-menu" class="col-span-full">
+          <p><a href="get-services.html">Services</a></p>
+          <p><a href="network.html">Network</a></p>
+          <p><a href="about.html">About</a></p>
+          <p><a href="events.html">Events</a></p>
+          <p><a href="career-volunteer.html">Careers & Volunteering</a></p>
+          <p><a href="blog.html">Blog</a></p>
+          <p><a href="contact.html">Contact</a></p>
         </div>
-      </section>
+      </div>
+    </section>
   </body>
   </html>

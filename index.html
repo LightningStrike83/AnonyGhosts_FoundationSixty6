@@ -69,23 +69,27 @@
 
         <a href="donate.html" class="col-span-full m-col-span-2">
           <div id="donate-button">
-            <div><span class="donate-text">Donate</div>
+            <div><span class="donate-text">Donate</span></div>
           </div>
         </a>
+      </div>
     </header>
 
-    <a id="home-hero-link">
         <section id="home-hero" class="full-width-grid-con">
-          <div id="home-con" class="grid-con">
-            <div id="home-hero-image" class="col-span-full hero-image">
-              <div>
-                <p id="home-hero-text" class="hero-text"></p>
-                <p class="home-hero-supplementary-text"></p>
-              </span>
-            </div>
-          </div>
+          <h2 class="hidden">Home Hero Image</h2>
+            <p id="left-arrow" class="arrow">◄</p>
+            <a id="home-hero-link">
+              <div id="home-con" class="grid-con">
+                <div id="home-hero-image" class="col-span-full hero-image">
+                  <div>
+                    <p id="home-hero-text" class="hero-text"></p>
+                    <p class="home-hero-supplementary-text"></p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          <p id="right-arrow" class="arrow">►</p>
       </section>
-    </a>
 
     <section id="who-are-we" class="grid-con">
       <div id="waw-text" class="col-span-full m-col-start-2 m-col-span-5">
@@ -179,16 +183,6 @@
       </div>
     </section>
 
-    <!--For MJ:
-      
-      <a class="mi-link" href="" style="background-image: url('images/')";>
-        <div class="mental-health-info">
-          <h3></h3>
-        </div>
-      </a>
-    
-    Note For MJ: The reason why I wrote the code this way is because if the foundation focuses more on mental illnesses, it will dynamically populate an image for them. It's easier to write the code for you too this way. Everything else is looked after in the SASS.-->
-
     <section id="home-services" class="grid-con">
       <div id="home-services-text" class="col-span-full">
         <h3 class="dmt">Explore Around The Site</h3>
@@ -267,6 +261,7 @@
     </footer>
 
     <section id="bottom-menu">
+      <h2 class="hidden">Bottom Menu</h2>
       <div id="activation-button">
         <img class="bottom-icon" src="images/icons/information2.png" alt="Menu Icon">
       </div>
@@ -278,7 +273,8 @@
       </template>
     </section>
 
-    <section class="nav-lightbox" class="lightbox">
+    <section class="nav-lightbox lightbox">
+      <h2 class="hidden">Mobile Menu</h2>
       <div class="grid-con">
         <p class="lb-close col-start-4 col-end-5">X</p>
         <div id="lightbox-menu" class="col-span-full">

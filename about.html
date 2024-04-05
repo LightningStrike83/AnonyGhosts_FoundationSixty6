@@ -29,7 +29,6 @@
 
     <header class="full-width-grid-con">
       <div id="header-con" class="grid-con">
-
         <div id="header-logo" class="col-span-2 m-col-span-3">
           <a href="index.html"><img src="images/logo-final.svg" alt="Foundation Sixty6 logo"></a>
         </div>
@@ -70,13 +69,15 @@
 
         <a href="donate.html" class="col-span-full m-col-span-2">
           <div id="donate-button">
-            <div><span class="donate-text">Donate</div>
+            <div><span class="donate-text">Donate</span></div>
           </div>
         </a>
+        </div>
     </header>
     
     <section id="about-hero" class="full-width-grid-con">
         <div class="col-span-full hero-image">
+          <h2 class="hidden">About Hero Image</h2>
             <p class="hero-text">About Us</p>
         </div>
     </section>
@@ -225,6 +226,8 @@
             <p class="dmt">These partners believe in our cause and help us in providing support and opportunities to those who need it.</p>
         </div>
 
+        <div class="catch-handle col-span-full"></div>
+
         <div id="partner-con" class="col-span-full">
             <div v-for="partner in partnerList" class="partner-info-con">
               <a :href="partner.page_url">
@@ -296,6 +299,7 @@
     </footer>
   
       <section id="bottom-menu">
+        <h2 class="hidden">Bottom Menu</h2>
         <div id="activation-button">
           <img class="bottom-icon" src="images/icons/information2.png" alt="Menu Icon">
         </div>
@@ -307,7 +311,8 @@
         </template>
       </section>
   
-      <section class="nav-lightbox" class="lightbox">
+      <section class="nav-lightbox lightbox">
+        <h2 class="hidden">Mobile Menu</h2>
         <div class="grid-con">
           <p class="lb-close col-start-4 col-end-5">X</p>
           <div id="lightbox-menu" class="col-span-full">

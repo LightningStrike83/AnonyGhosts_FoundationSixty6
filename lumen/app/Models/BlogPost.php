@@ -11,7 +11,7 @@ class BlogPost extends Model
      *
      * @var array
      */
-    protected $fillable = ["title", "description", "author", "text", "date", "image_filename"];
+    protected $fillable = ["title", "description", "author", "text", "date", "image_filename", "id"];
 
     /**
      * The attributes excluded from the model's JSON form.

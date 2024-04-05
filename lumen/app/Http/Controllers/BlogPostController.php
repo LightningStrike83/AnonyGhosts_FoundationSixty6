@@ -15,7 +15,7 @@ class BlogPostController extends Controller {
      */
 
      public function getAll(){
-        $blogposts = BlogPost::all();
+        $blogposts = BlogPost::join('authors', 'blog_posts.author', '=', 'authors.id')->select("title", "blog_posts.id", "description", "author", "text", "date", "image_filename", "name")->get();
         return response()->json($blogposts);
     }
 

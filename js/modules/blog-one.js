@@ -1,4 +1,5 @@
 export function blogOne() {
+    const catchHandle = document.querySelector(".catch-handle")
     var search = window.location.search
     var blogID =  search.replace(/[\D]/g, '')
 
@@ -7,11 +8,19 @@ export function blogOne() {
             fetch(`http://localhost/AnonyGhosts_FoundationSixty6/lumen/public/blog_posts/${blogID}`)
             .then(response => response.json())
             .then(blog => {
-                console.log(blog)
+                catchHandle.innerHTML = ""
                 this.blogPost = blog;
             })
             .catch(error => {
-                console.log(error)
+                const catchHandle = document.querySelector(".catch-handle")
+                let errortext = document.createElement("p")
+
+                catchHandle.innerHTML = ""
+                catchHandle.style.display = "block"
+
+                errortext.textContent = error
+
+                catchHandle.appendChild(errortext)
             })
         },
 

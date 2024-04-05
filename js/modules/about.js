@@ -1,14 +1,23 @@
 export function aboutPartners() {
+    const catchHandle = document.querySelector(".catch-handle")
     const partnerDisplay = Vue.createApp ({
         created() {
             fetch('http://localhost/AnonyGhosts_FoundationSixty6/lumen/public/partners')
             .then(response => response.json())
             .then(partner => {
-                console.log(partner)
+                catchHandle.innerHTML = ""
                 this.partnerList = partner
             })
             .catch(error => {
-                console.log(error)
+                const catchHandle = document.querySelector(".catch-handle")
+                let errortext = document.createElement("p")
+
+                catchHandle.innerHTML = ""
+                catchHandle.style.display = "block"
+
+                errortext.textContent = error
+
+                catchHandle.appendChild(errortext)
             })
         },
 
