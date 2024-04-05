@@ -35,7 +35,7 @@ $router->delete('/contacts/delete/{id}', 'ContactController@delete');
 
 //Events
 $router->get("/events", "EventController@getAll");
-// $router->get("/events/{id}", "EventController@getOne");
+$router->get("/events/{id}", "EventController@getOne");
 $router->post("/events/add", "EventController@save");
 $router->post('/events/edit/{id}', 'EventController@update');
 $router->delete('/events/delete/{id}', 'EventController@delete');
@@ -43,7 +43,7 @@ $router->delete('/events/delete/{id}', 'EventController@delete');
 
 //Volunteers
 $router->get("/volunteers", "VolunteerController@getAll");
-// $router->get("/volunteers/{id}", "VolunteerController@getOne");
+$router->get("/volunteers/{id}", "VolunteerController@getOne");
 $router->post("/volunteers/add", "VolunteerController@save");
 $router->post('/volunteers/edit/{id}', 'VolunteerController@update');
 $router->delete('/volunteers/delete/{id}', 'VolunteerController@delete');
@@ -51,7 +51,7 @@ $router->delete('/volunteers/delete/{id}', 'VolunteerController@delete');
 
 //Careers
 $router->get("/careers", "CareerController@getAll");
-// $router->get("/careers/{id}", "CareerController@getOne");
+$router->get("/careers/{id}", "CareerController@getOne");
 $router->post("/careers/add", "CareerController@save");
 $router->post('/careers/edit/{id}', 'CareerController@update');
 $router->delete('/careers/delete/{id}', 'CareerController@delete');
@@ -60,7 +60,7 @@ $router->delete('/careers/delete/{id}', 'CareerController@delete');
 
 //Partners
 $router->get("/partners", "PartnerController@getAll");
-// $router->get("/partners/{id}", "PartnerController@getOne");
+$router->get("/partners/{id}", "PartnerController@getOne");
 $router->post("/partners/add", "PartnerController@save");
 $router->post('/partners/edit/{id}', 'PartnerController@update');
 $router->delete('/partners/delete/{id}', 'PartnerController@delete');

@@ -85,20 +85,22 @@
 
       <div id="event-form" class="col-span-2 m-col-span-6 admin-info-1">
         <h3 class="admin-h3">Add A New Event</h3>
-        <form method="POST" enctype="multipart/form-data">
-          <label for="title">Event Title:</label><br>
-          <input name="title" type="text" required><br><br>
-          <label for="date">Event Date:</label><br>
-          <input name="date" type="text" required><br><br>
-          <label for="place">Event Location:</label><br>
-          <input name="place" type="text" required><br><br>
-          <label for="time">Event Time:</label><br>
-          <input name="time" type="text" required><br><br>
+        <form id="admin-add-event" method="POST" enctype="multipart/form-data">
+          <label for="title">Event Title:</label><br><br>
+          <input name="title" type="text" required><br><br><br>
+          <label for="date">Event Date:</label><br><br>
+          <input name="date" type="text" required><br><br><br>
+          <label for="place">Event Location:</label><br><br>
+          <input name="place" type="text" required><br><br><br>
+          <label for="time">Event Time:</label><br><br>
+          <input name="time" type="text" required><br><br><br>
           <label for="description">Event Description:</label><br>
           <textarea name="description" required></textarea><br><br>
           <input name="image_filename" type="file" required><br>
-          <input name="submit" type="submit" value="Add">
+          <input class="admin-submit" name="submit" type="submit" value="Add">
         </form>
+
+        <div id="event-add-feedback"></div>
       </div>
     </section>
 
@@ -112,18 +114,22 @@
 
       <div id="blog-form" class="col-span-2 m-col-span-6 admin-info-2">
         <h3 class="admin-h3">Add A New Blog Entry</h3>
-        <form method="POST" enctype="multipart/form-data">
-          <label for="title">Blog Title:</label><br>
-          <input name="title" type="text" required><br><br>
-          <label for="author">Blog Author:</label><br>
-          <input name="author" type="number" min="1" required><br><br>
-          <label for="date">Blog Date:</label><br>
-          <input name="date" type="date" required><br><br>
-          <label for="text">Blog Text:</label><br>
-          <textarea name="text" required></textarea><br>
+        <form id="admin-add-blog" method="POST" enctype="multipart/form-data">
+          <label for="title">Blog Title:</label><br><br>
+          <input name="title" type="text" required><br><br><br>
+          <label for="description">Blog Description:</label><br><br>
+          <input name="description" type="text" required><br><br><br>
+          <label for="author">Blog Author:</label><br><br>
+          <input name="author" type="number" min="1" value="1" required><br><br><br>
+          <label for="date">Blog Date:</label><br><br>
+          <input name="date" type="date" required><br><br><br>
+          <label for="text">Blog Text:</label><br><br>
+          <textarea name="text" required></textarea><br><br>
           <input name="image_filename" type="file" required><br>
-          <input name="submit" type="submit" value="Add">
+          <input class="admin-submit" name="submit" type="submit" value="Add">
         </form>
+
+        <div id="blog-add-feedback"></div>
       </div>
     </section>
 
@@ -137,21 +143,23 @@
 
       <div id="volunteer-form" class="col-span-2 m-col-span-6 admin-info-3">
         <h3 class="admin-h3">Add A New Volunteer Listing</h3>
-        <form method="POST" enctype="multipart/form-data">
-          <label for="reference">Reference Number:</label><br>
-          <input name="reference" type="text"><br><br>
-          <label for="title">Volunteer Title:</label><br>
-          <input name="title" type="text" required><br><br>
-          <label for="date">Volunteer Date:</label><br>
-          <input name="date" type="text" required><br><br>
-          <label for="location">Volunteer Location:</label><br>
-          <input name="location" type="text" required><br><br>
-          <label for="time">Volunteer Time:</label><br>
-          <input name="time" type="text" required><br><br>
-          <label for="description">Volunteer Description:</label><br>
-          <textarea name="description" required></textarea><br>
-          <input name="submit" type="submit" value="Add">
+        <form id="admin-add-volunteer" method="POST" enctype="multipart/form-data">
+          <label for="reference">Reference Number:</label><br><br>
+          <input name="reference" type="text"><br><br><br>
+          <label for="title">Volunteer Title:</label><br><br>
+          <input name="title" type="text" required><br><br><br>
+          <label for="date">Volunteer Date:</label><br><br>
+          <input name="date" type="text" required><br><br><br>
+          <label for="location">Volunteer Location:</label><br><br>
+          <input name="location" type="text" required><br><br><br>
+          <label for="time">Volunteer Time:</label><br><br>
+          <input name="time" type="text" required><br><br><br>
+          <label for="description">Volunteer Description:</label><br><br>
+          <textarea name="description" required></textarea><br><br>
+          <input class="admin-submit" name="submit" type="submit" value="Add">
         </form>
+
+        <div id="volunteer-add-feedback"></div>
       </div>
     </section>
 
@@ -165,15 +173,17 @@
 
       <div id="career-form" class="col-span-2 m-col-span-6 admin-info-4">
         <h3 class="admin-h3">Add A New Career Opportunity</h3>
-        <form method="POST" enctype="multipart/form-data">
-          <label for="reference">Reference Number:</label><br>
-          <input name="reference" type="text"><br><br>
-          <label for="title">Career Title:</label><br>
-          <input name="title" type="text" required><br><br>
-          <label for="description">Career Description:</label><br>
-          <textarea name="description" required></textarea><br>
-          <input name="submit" type="submit" value="Add">
+        <form id="admin-add-career" method="POST" enctype="multipart/form-data">
+          <label for="reference">Reference Number:</label><br><br>
+          <input name="reference" type="text"><br><br><br>
+          <label for="title">Career Title:</label><br><br>
+          <input name="title" type="text" required><br><br><br>
+          <label for="description">Career Description:</label><br><br>
+          <textarea name="description" required></textarea><br><br>
+          <input class="admin-submit" name="submit" type="submit" value="Add">
         </form>
+
+        <div id="career-add-feedback"></div>
       </div>
     </section>
 
@@ -187,14 +197,16 @@
 
       <div id="partner-form" class="col-span-2 m-col-span-6 admin-info-5">
         <h3 class="admin-h3">Add A New Partner</h3>
-        <form method="POST" enctype="multipart/form-data">
-          <label for="name">Name:</label><br>
-          <input name="name" type="text" required><br><br>
-          <label for="page_url">Link:</label><br>
-          <input name="page_url" required></textarea><br><br>
+        <form id="admin-add-partner" method="POST" enctype="multipart/form-data">
+          <label for="name">Name:</label><br><br>
+          <input name="name" type="text" required><br><br><br>
+          <label for="page_url">Link:</label><br><br>
+          <input name="page_url" required><br><br>
           <input name="image_url" type="file" required><br>
-          <input name="submit" type="submit" value="Add">
+          <input class="admin-submit" name="submit" type="submit" value="Add">
         </form>
+
+        <div id="partner-add-feedback"></div>
       </div>
     </section>
 

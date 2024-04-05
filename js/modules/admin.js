@@ -34,7 +34,7 @@ export function adminScripts() {
                 description.textContent = `Description: ${result.description}`
 
                 editLink.textContent = "Edit"
-                editLink.href = `${baseURL}events/edit/${result.id}`
+                editLink.href = `/admin/edit-event.html?id=${result.id}`
                 deleteLink.textContent = "Delete"
                 deleteLink.href = `${baseURL}events/delete/${result.id}`
 
@@ -74,7 +74,7 @@ export function adminScripts() {
                 actionDiv.setAttribute("class", "admin-action-div")
 
                 editLink.textContent = "Edit"
-                editLink.href = `${baseURL}blogs/edit/${result.id}`
+                editLink.href = `/admin/edit-blogpost.html?id=${result.id}`
                 deleteLink.textContent = "Delete"
                 deleteLink.href = `${baseURL}blogs/delete/${result.id}`
 
@@ -122,7 +122,7 @@ export function adminScripts() {
                 actionDiv.setAttribute("class", "admin-action-div")
 
                 editLink.textContent = "Edit"
-                editLink.href = `${baseURL}volunteers/edit/${result.id}`
+                editLink.href = `/admin/edit-volunteer.html?id=${result.id}`
                 deleteLink.textContent = "Delete"
                 deleteLink.href = `${baseURL}volunteers/delete/${result.id}`
 
@@ -170,7 +170,7 @@ export function adminScripts() {
                 actionDiv.setAttribute("class", "admin-action-div")
 
                 editLink.textContent = "Edit"
-                editLink.href = `${baseURL}careers/edit/${result.id}`
+                editLink.href = `/admin/edit-career.html?id=${result.id}`
                 deleteLink.textContent = "Delete"
                 deleteLink.href = `${baseURL}careers/delete/${result.id}`
 
@@ -204,7 +204,7 @@ export function adminScripts() {
                 actionDiv.setAttribute("class", "admin-action-div")
 
                 editLink.textContent = "Edit"
-                editLink.href = `${baseURL}partners/edit/${result.id}`
+                editLink.href = `/admin/edit-partner.html?id=${result.id}`
                 deleteLink.textContent = "Delete"
                 deleteLink.href = `${baseURL}partners/delete/${result.id}`
 

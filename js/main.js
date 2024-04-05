@@ -1,4 +1,5 @@
 import { aboutPartners } from "./modules/about.js";
+import { addnewEntry } from "./modules/addNewEntry.js";
 import { adminScripts } from "./modules/admin.js";
 import { blogOne } from "./modules/blog-one.js";
 import { blogCreationRecent } from "./modules/blog-recent.js";
@@ -7,6 +8,11 @@ import { bottomMenu } from "./modules/bottom.js";
 import { careervolunteer } from "./modules/career-volunteer.js";
 import { darkModeFix } from "./modules/darkmodebug.js";
 import { donateVideo } from "./modules/donate.js";
+import { editBlogPost } from "./modules/edit-blogpost.js";
+import { editCareer } from "./modules/edit-career.js";
+import { editEvent } from "./modules/edit-event.js";
+import { editPartner } from "./modules/edit-partner.js";
+import { editVolunteer } from "./modules/edit-volunteer.js";
 import { eventInfo } from "./modules/events.js";
 import { factsInfo } from "./modules/facts.js";
 import { FAQ } from "./modules/faq.js";
@@ -24,6 +30,7 @@ if (document.body.dataset.page === 'faq') {
 
 if (document.body.dataset.page === 'admin') {
     adminScripts()
+    addnewEntry()
 }
 
 if (document.body.dataset.page === 'about') {
@@ -71,8 +78,20 @@ if (document.body.dataset.page === 'donate') {
     video()
 }
 
-hamburger();
-bottomMenu();
-clickMenu();
-submitNewsletter();
-darkModeFix()
+if (document.body.dataset.page === 'edit-volunteer') {
+    editVolunteer()
+} else if (document.body.dataset.page === 'edit-partner') {
+    editPartner()
+} else if (document.body.dataset.page === 'edit-event') {
+    editEvent()
+} else if (document.body.dataset.page === 'edit-career') {
+    editCareer()
+} else if (document.body.dataset.page === 'edit-blog-post') {
+    editBlogPost()
+} else {
+    hamburger();
+    bottomMenu();
+    clickMenu();
+    submitNewsletter();
+    darkModeFix()
+}
