@@ -1,14 +1,23 @@
 export function blogCreationRecent() {
+    const catchHandle = document.querySelector(".catch-handle")
     const blogPosts = Vue.createApp({
         created() {
             fetch('http://localhost/AnonyGhosts_FoundationSixty6/lumen/public/blog_posts')
             .then(response => response.json())
             .then(blog => {
-                console.log(blog)
+                catchHandle.innerHTML = ""
                 this.blogPost = blog;
             })
             .catch(error => {
-                console.log(error)
+                const catchHandle = document.querySelector(".catch-handle")
+                let errortext = document.createElement("p")
+
+                catchHandle.innerHTML = ""
+                catchHandle.style.display = "block"
+
+                errortext.textContent = error
+
+                catchHandle.appendChild(errortext)
             })
         },
 
@@ -22,6 +31,7 @@ export function blogCreationRecent() {
                 date: "",
                 text: "",
                 image_filename: "",
+                name: "",
             }
         },
     })

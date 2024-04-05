@@ -1,14 +1,23 @@
 export function careervolunteer() {
+    const catchHandle = document.querySelector(".catch-handle")
     const careerList = Vue.createApp({
         created() {
             fetch('http://localhost/AnonyGhosts_FoundationSixty6/lumen/public/careers')
             .then(response => response.json())
             .then(career => {
-                console.log(career)
+                catchHandle.innerHTML = ""
                 this.careerList = career
             })
             .catch(error => {
-                console.log(error)
+                const catchHandle = document.querySelector(".catch-handle")
+                let errortext = document.createElement("p")
+
+                catchHandle.innerHTML = ""
+                catchHandle.style.display = "block"
+
+                errortext.textContent = error
+
+                catchHandle.appendChild(errortext)
             })
         },
 
@@ -27,11 +36,19 @@ export function careervolunteer() {
             fetch('http://localhost/AnonyGhosts_FoundationSixty6/lumen/public/volunteers')
             .then(response => response.json())
             .then(volunteer => {
-                console.log(volunteer)
+                catchHandle.innerHTML = ""
                 this.volunteerList = volunteer
             })
             .catch(error => {
-                console.log(error)
+                const catchHandle = document.querySelector(".catch-handle")
+                let errortext = document.createElement("p")
+
+                catchHandle.innerHTML = ""
+                catchHandle.style.display = "block"
+
+                errortext.textContent = error
+
+                catchHandle.appendChild(errortext)
             })
         },
 

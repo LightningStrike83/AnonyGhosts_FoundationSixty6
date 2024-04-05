@@ -80,13 +80,17 @@ export function factsInfo() {
         const fictionBox = document.querySelector(`.fiction-box-${dataMember}`)
         const factBox = document.querySelector(`.fact-box-${dataMember}`)
 
-        if (fictionBox.style.display === "flex") {
-            fictionBox.style.display = "none"
-            factBox.style.display = "flex"  
-            
-        } else if (fictionBox.style.display === "none") {
+        if (this.classList.contains("clicked")) {
             fictionBox.style.display = "flex"
             factBox.style.display = "none"
+            this.classList.remove("clicked")
+        } else {
+            const ffDiv = document.querySelectorAll(".ff-div")
+            ffDiv.forEach(div => div.classList.remove("clicked"))
+
+            fictionBox.style.display = "none"
+            factBox.style.display = "flex"
+            this.classList.add("clicked")
         }
     }
 

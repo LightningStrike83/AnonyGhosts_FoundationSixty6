@@ -122,6 +122,13 @@ video {
     }
 }
 
+
+.catch-handle {
+    display: none;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
 @media screen and (min-width: 768px) {
     textarea {
         height: 120px;
@@ -186,28 +193,28 @@ video {
     }
 }
 
-@media screen and (min-width: 1920px) {
-    section {
-        margin-bottom: 45px!important;
-    }
+// @media screen and (min-width: 1920px) {
+//     section {
+//         margin-bottom: 45px!important;
+//     }
 
-    .custom-button {
-        padding-left: 70px;
-        padding-right: 70px;
-        padding-top: 25px;
-        padding-bottom: 25px;
-        font-size: 25px;
-    }
+//     .custom-button {
+//         padding-left: 70px;
+//         padding-right: 70px;
+//         padding-top: 25px;
+//         padding-bottom: 25px;
+//         font-size: 25px;
+//     }
 
-    .hero-image {
-        height: 700px;
-    }
+//     .hero-image {
+//         height: 700px;
+//     }
 
-    label {
-        font-size: 24px;
-    }
+//     label {
+//         font-size: 24px;
+//     }
 
-    .divider {
-        margin-bottom: 45px;
-    }
-}
+//     .divider {
+//         margin-bottom: 45px;
+//     }
+// }

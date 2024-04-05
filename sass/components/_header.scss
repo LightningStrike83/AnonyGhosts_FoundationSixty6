@@ -89,7 +89,7 @@ header {
     position: absolute;
     background-color: v.$blue;
     top: 60px;
-    left: 40%;
+    left: 45%;
     display: none;
     flex-direction: column;
     border-radius: 20px;
@@ -145,10 +145,10 @@ header {
     }
 }
 
-@media screen and (min-width: 1920px) {
-    #explore-menu {
-        a {
-            margin: 40px;
-        }
-    }
-}
+// @media screen and (min-width: 1920px) {
+//     #explore-menu {
+//         a {
+//             margin: 40px;
+//         }
+//     }
+// }

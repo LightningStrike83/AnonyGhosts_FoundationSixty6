@@ -68,14 +68,16 @@
 
         <a href="donate.html" class="col-span-full m-col-span-2">
           <div id="donate-button">
-            <div><span class="donate-text">Donate</div>
+            <div><span class="donate-text">Donate</span></div>
           </div>
         </a>
+      </div>
     </header>
 
     <section id="contact-hero" class="full-width-grid-con">
         <div class="col-span-full hero-image">
-            <p class="hero-text">CONTACT US</p>
+          <h2 class="hidden">Contact Hero Image</h2>
+            <p class="hero-text">Contact Us</p>
         </div>
     </section>
 
@@ -126,6 +128,7 @@
     </section>
 
     <section id="contact-contact">
+      <h2 class="hidden">Contact Form</h2>
       <div id="contact-con">
         <div id="form-con" class="grid-con">
           <div class="col-span-full m-col-start-2 m-col-end-12">
@@ -139,7 +142,7 @@
                 <input id="email" name="email" type="text" placeholder="Your Email">
               </div>
               <div class="form-style">
-                <label for="ref-no">Subject*</label><br><br>
+                <label for="subject">Subject*</label><br><br>
                 <input id="subject" name="subject" type="text" placeholder="Subject">
               </div>
               <div class="form-style">
@@ -200,31 +203,33 @@
       </div>
     </footer>
   
-      <section id="bottom-menu">
-        <div id="activation-button">
-          <img class="bottom-icon" src="images/icons/information2.png" alt="Menu Icon">
+    <section id="bottom-menu">
+      <h2 class="hidden">Bottom Menu</h2>
+      <div id="activation-button">
+        <img class="bottom-icon" src="images/icons/information2.png" alt="Menu Icon">
+      </div>
+      
+      <template id="button-template">
+        <div class="clone-div">
+          <img class="clone-img">
         </div>
-        
-        <template id="button-template">
-          <div class="clone-div">
-            <img class="clone-img">
-          </div>
-        </template>
-      </section>
+      </template>
+    </section>
 
-      <section class="nav-lightbox" class="lightbox">
-        <div class="grid-con">
-          <p class="lb-close col-start-4 col-end-5">X</p>
-          <div id="lightbox-menu" class="col-span-full">
-            <p><a href="get-services.html">Services</a></p>
-            <p><a href="network.html">Network</a></p>
-            <p><a href="about.html">About</a></p>
-            <p><a href="events.html">Events</a></p>
-            <p><a href="career-volunteer.html">Careers & Volunteering</a></p>
-            <p><a href="blog.html">Blog</a></p>
-            <p><a href="contact.html">Contact</a></p>
-          </div>
+    <section class="nav-lightbox lightbox">
+      <h2 class="hidden">Mobile Menu</h2>
+      <div class="grid-con">
+        <p class="lb-close col-start-4 col-end-5">X</p>
+        <div id="lightbox-menu" class="col-span-full">
+          <p><a href="get-services.html">Services</a></p>
+          <p><a href="network.html">Network</a></p>
+          <p><a href="about.html">About</a></p>
+          <p><a href="events.html">Events</a></p>
+          <p><a href="career-volunteer.html">Careers & Volunteering</a></p>
+          <p><a href="blog.html">Blog</a></p>
+          <p><a href="contact.html">Contact</a></p>
         </div>
-      </section>
+      </div>
+    </section>
 </body>
 </html>
